@@ -4,9 +4,11 @@
 Flow
 
 ## Project Summary
-Flow is a premium Indonesian footwear and sneaker showcase site built for the TRAE x PixVerse hackathon. The experience is designed as a cinematic single-page storefront with a scroll-driven hero, editorial storytelling, curated variants, reviews, a header cart popup, and a dedicated `/support` route for video-led customer support.
+Flow is a premium Indonesian footwear and sneaker showcase site built for the TRAE x PixVerse hackathon. The experience is designed as a cinematic single-page storefront with a scroll-driven hero, editorial storytelling, curated variants, reviews, a header cart popup, and a dedicated `/support` route.
 
-The product direction is intentionally frontend-first and media-led. PixVerse-generated videos are treated as first-class product content, especially in the hero and story sections.
+The product direction is intentionally frontend-first and media-led. PixVerse-generated videos are treated as first-class product content, especially in the hero and story sections, so the storefront feels closer to a fashion campaign than a conventional ecommerce landing page.
+
+The support page extends that same idea instead of breaking away from it. Rather than using a static FAQ or generic support layout, `/support` is built as a video-led conversational experience where suggested prompts, templated questions, synchronized support-host videos, and deterministic answers make customer assistance feel immersive, calm, and brand-consistent.
 
 ## Target Audience
 Flow is a storefront for a premium, design-led footwear brand. It is built for:
