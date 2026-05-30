@@ -9,20 +9,31 @@ Flow is a premium Indonesian footwear and sneaker showcase site built for the TR
 The product direction is intentionally frontend-first and media-led. PixVerse-generated videos are treated as first-class product content, especially in the hero and story sections.
 
 ## Target Audience
+Flow is a storefront for a premium, design-led footwear brand. It is built for:
 - Style-conscious shoppers who want footwear with a premium, fashion-editorial feel
-- Users who respond to cinematic product storytelling rather than generic ecommerce layouts
-- Hackathon judges, creative technologists, and product/design reviewers evaluating the Flow experience
-- Early brand viewers who want a sharper, more curated Indonesian footwear identity
+- Customers who respond to cinematic product storytelling rather than generic ecommerce layouts
+- Buyers who need reassurance before purchase — sizing, authenticity, returns, shipping — but prefer guided, on-demand answers over live chat
+- Brand-led and early-adopter customers drawn to a sharper, more curated Indonesian footwear identity
 
 ## Problem Being Solved
-Most ecommerce footwear experiences feel static, interchangeable, and overly transactional. Flow aims to solve that by presenting shoes through a more immersive, cinematic, and brand-led experience.
+Most ecommerce footwear experiences feel static, interchangeable, and overly transactional. They lead with a commodity product grid that does little to build desire or brand trust, and they push pre-purchase questions into generic FAQs or slow live chat.
 
-Instead of leading with a commodity product grid, Flow leads with:
+Flow exists to give a premium footwear brand a storefront that sells through experience, not just listing. It does this by leading with:
 - scroll-driven product storytelling
 - premium editorial presentation
 - curated product variants
 - lightweight cart intent
-- calm, templated support answers on a dedicated route
+- calm, video-led support answers on a dedicated route
+
+## TRAE Workflow
+Flow is built with TRAE as the primary coding agent, following a documentation-driven workflow so the agent and human contributors share a single source of truth. The high-level workflow implemented:
+
+1. **Plan** — product and design intent is captured up front in `.trae/documents/` (`flow-prd.md`, `flow-technical-architecture.md`, `flow-page-design.md`).
+2. **Contract** — the planning set is distilled into an operating layer the agent reads on every task: `AGENTS.md` (how agents work and what not to break), `DECISIONS.md` (locked decisions / ADRs), `features.json` (machine-readable feature spec), `ARCHITECTURE.md` (structure), and `PROGRESS.md` (status).
+3. **Source-of-truth precedence** — on conflict, docs resolve in order: `DECISIONS.md` → `flow-page-design.md` → `flow-technical-architecture.md` → `flow-prd.md` → `features.json` → `PROGRESS.md`.
+4. **Implement in scoped passes** — TRAE builds one surface at a time (app shell + routing → scroll-driven hero → commerce sections → support), favoring modular React components and typed local data over backend dependencies.
+5. **Change protocol** — before significant work the agent reads `PROGRESS.md`, `DECISIONS.md`, and `features.json`; after a change it updates `PROGRESS.md`, and revises `DECISIONS.md` / `features.json` / `ARCHITECTURE.md` when scope, decisions, or structure shift.
+6. **Review & verify** — each pass is reviewed for brand fidelity and correctness, then validated with `npm run check` (lint + build + test) before moving on.
 
 ## Tech Stack
 - React
