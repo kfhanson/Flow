@@ -16,6 +16,8 @@ Project phase: scaffolded + initial implementation
 - Added Zustand stores for cart, showcase hero progress, and support selection
 - Added typed local mock data modules for products, reviews, and support Q&A
 - Added Vitest + React Testing Library and a smoke test for the app shell
+- Support page demo assistant: plays `how can i help` once on load, then loops `idle`; support prompts play their mapped videos once then return to idle
+- Support prompt chips are horizontally draggable (no wrapping) and the chat area stays constrained/scrollable
 
 ## In Progress
 - Replacing placeholder “video stages” with real PixVerse video + poster assets (hero + support host)

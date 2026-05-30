@@ -1,13 +1,12 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import Container from './Container'
 import { useCartStore } from '../../store/cartStore'
 import { formatIDRCurrency } from '../../utils/formatCurrency'
-import Container from './Container'
 
 function useIsHomeRoute() {
   const location = useLocation()
   return location.pathname === '/'
 }
-
 export default function SiteHeader() {
   const isHomeRoute = useIsHomeRoute()
   const cartItemCount = useCartStore((s) => s.itemCount())
@@ -45,6 +44,31 @@ export default function SiteHeader() {
             className={({ isActive }) =>
               [
                 'hover:text-text-primary',
+                isActive ? 'text-text-primary' : 'text-text-muted',
+              ].join(' ')
+            }
+          >
+            Support
+          </NavLink>
+        </nav>
+
+        <nav className="flex items-center gap-3 text-xs text-text-muted md:hidden">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              [
+                'rounded-full border border-border-strong px-3 py-1 transition hover:border-brand-red/60 hover:text-text-primary',
+                isActive ? 'text-text-primary' : 'text-text-muted',
+              ].join(' ')
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/support"
+            className={({ isActive }) =>
+              [
+                'rounded-full border border-border-strong px-3 py-1 transition hover:border-brand-red/60 hover:text-text-primary',
                 isActive ? 'text-text-primary' : 'text-text-muted',
               ].join(' ')
             }
