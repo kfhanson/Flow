@@ -46,14 +46,15 @@ export default function SupportStage() {
   const mutedRef = useRef(false)
   const autoplayBlockedRef = useRef(false)
   const [activeSlot, setActiveSlot] = useState<'a' | 'b'>('a')
+  const activeSlotRef = useRef<'a' | 'b'>('a')
   const [pendingSlot, setPendingSlot] = useState<'a' | 'b' | null>(null)
+  const pendingSlotRef = useRef<'a' | 'b' | null>(null)
   const [aSrc, setASrc] = useState(supportHelpVideoSrc)
   const [aLoop, setALoop] = useState(false)
   const [bSrc, setBSrc] = useState<string | null>(null)
   const [bLoop, setBLoop] = useState(false)
   const videoARef = useRef<HTMLVideoElement | null>(null)
   const videoBRef = useRef<HTMLVideoElement | null>(null)
-  const fadeTimeoutRef = useRef<number | null>(null)
   const [messages, setMessages] = useState<AssistantMessage[]>(() => [
     {
       id: 'flow-greeting',
@@ -97,12 +98,12 @@ export default function SupportStage() {
   }, [messages.length])
 
   useEffect(() => {
-    return () => {
-      if (fadeTimeoutRef.current) {
-        window.clearTimeout(fadeTimeoutRef.current)
-      }
-    }
-  }, [])
+    activeSlotRef.current = activeSlot
+  }, [activeSlot])
+
+  useEffect(() => {
+    pendingSlotRef.current = pendingSlot
+  }, [pendingSlot])
 
   useEffect(() => {
     mutedRef.current = muted
@@ -165,12 +166,11 @@ export default function SupportStage() {
   }
 
   function enableSound() {
-    setSoundHintDismissed(true)
     mutedRef.current = false
     autoplayBlockedRef.current = false
     setMuted(false)
     setAutoplayBlocked(false)
-    const el = getVideoEl(activeSlot)
+    const el = getVideoEl(activeSlotRef.current)
     if (!el) return
     el.pause()
     el.currentTime = 0
@@ -179,9 +179,11 @@ export default function SupportStage() {
       .play()
       .then(() => {
         setAutoplayBlocked(false)
+        setSoundHintDismissed(true)
       })
       .catch(() => {
         setAutoplayBlocked(true)
+        setSoundHintDismissed(false)
       })
   }
 
@@ -199,13 +201,13 @@ export default function SupportStage() {
   }
 
   function switchTo(src: string, loop: boolean) {
-    const incoming: 'a' | 'b' = activeSlot === 'a' ? 'b' : 'a'
+    const incoming: 'a' | 'b' = activeSlotRef.current === 'a' ? 'b' : 'a'
     setPendingSlot(incoming)
     setSlotSource(incoming, src, loop)
   }
 
   function interruptAndPlayNext(src: string, loop: boolean) {
-    const outgoingEl = getVideoEl(activeSlot)
+    const outgoingEl = getVideoEl(activeSlotRef.current)
     if (outgoingEl) outgoingEl.pause()
     switchTo(src, loop)
   }
@@ -231,7 +233,7 @@ export default function SupportStage() {
           return
         }
       }
-      if (pendingSlot === slot) {
+      if (pendingSlotRef.current === slot) {
         const outgoing: 'a' | 'b' = slot === 'a' ? 'b' : 'a'
         const outgoingEl = getVideoEl(outgoing)
         if (outgoingEl) {
@@ -240,14 +242,14 @@ export default function SupportStage() {
         }
         setActiveSlot(slot)
         setPendingSlot(null)
-      } else if (activeSlot !== slot) {
+      } else if (activeSlotRef.current !== slot) {
         el.pause()
       }
     })()
   }
 
   function onVideoEnded(slot: 'a' | 'b') {
-    if (slot !== activeSlot) return
+    if (slot !== activeSlotRef.current) return
     const src = slot === 'a' ? aSrc : bSrc
     if (!src) return
     if (src === supportIdleVideoSrc) return
@@ -323,34 +325,48 @@ export default function SupportStage() {
               <div className="min-h-0 md:col-span-7">
                 <div className="h-full min-h-0 overflow-hidden rounded-3xl border border-border-strong bg-bg-panel">
                   <div className="relative h-full w-full bg-black">
-                <video
-                  ref={videoRef}
-                  key={videoSrc}
-                  src={videoSrc}
-                  className="absolute inset-0 h-full w-full object-contain"
-                  autoPlay
-                  muted={muted || autoplayBlocked}
-                  loop={videoLoop}
-                  playsInline
-                  onCanPlay={onVideoReady}
-                  onEnded={onVideoEnded}
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-red-soft/40 via-transparent to-transparent" />
-                <div
-                  className={[
-                    'absolute inset-0 bg-bg-primary transition-opacity duration-300 ease-in-out',
-                    videoFading ? 'opacity-100' : 'opacity-0',
-                  ].join(' ')}
-                />
-                <button
-                  type="button"
-                  onClick={toggleMuted}
-                  data-sound-toggle="true"
-                  className="absolute right-3 top-3 inline-flex items-center gap-2 rounded-full border border-border-strong bg-bg-primary/70 px-3 py-1 text-xs text-text-muted backdrop-blur transition hover:border-brand-red/60 hover:text-text-primary"
-                >
-                  {muted || autoplayBlocked ? <MuteIcon /> : <SoundIcon />}
-                  {autoplayBlocked && !muted && !soundHintDismissed ? 'Enable sound' : null}
-                </button>
+                    <video
+                      ref={videoARef}
+                      key={aSrc}
+                      src={aSrc}
+                      className={[
+                        'absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ease-in-out',
+                        activeSlot === 'a' ? 'opacity-100' : 'opacity-0',
+                      ].join(' ')}
+                      autoPlay
+                      muted={muted || autoplayBlocked}
+                      loop={aLoop}
+                      playsInline
+                      onCanPlay={() => onVideoReady('a')}
+                      onEnded={() => onVideoEnded('a')}
+                    />
+                    {bSrc ? (
+                      <video
+                        ref={videoBRef}
+                        key={bSrc}
+                        src={bSrc}
+                        className={[
+                          'absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ease-in-out',
+                          activeSlot === 'b' ? 'opacity-100' : 'opacity-0',
+                        ].join(' ')}
+                        autoPlay
+                        muted={muted || autoplayBlocked}
+                        loop={bLoop}
+                        playsInline
+                        onCanPlay={() => onVideoReady('b')}
+                        onEnded={() => onVideoEnded('b')}
+                      />
+                    ) : null}
+                    <div className="absolute inset-0 bg-gradient-to-br from-brand-red-soft/40 via-transparent to-transparent" />
+                    <button
+                      type="button"
+                      onClick={toggleMuted}
+                      data-sound-toggle="true"
+                      className="absolute right-3 top-3 inline-flex items-center gap-2 rounded-full border border-border-strong bg-bg-primary/70 px-3 py-1 text-xs text-text-muted backdrop-blur transition hover:border-brand-red/60 hover:text-text-primary"
+                    >
+                      {muted || autoplayBlocked ? <MuteIcon /> : <SoundIcon />}
+                      {autoplayBlocked && !muted && !soundHintDismissed ? 'Enable sound' : null}
+                    </button>
                   </div>
                 </div>
               </div>
