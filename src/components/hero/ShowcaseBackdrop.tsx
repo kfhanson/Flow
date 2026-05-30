@@ -216,7 +216,7 @@ export default function ShowcaseBackdrop() {
                 key={layer.src}
                 className={[
                   'absolute inset-0 h-full w-full object-cover',
-                  layer.id === 'commerce' ? 'scale-[1.04] blur-[2px]' : 'scale-[1.02]',
+                  layer.id === 'commerce' ? 'scale-[1.04] blur-[1px]' : 'scale-[1.02]',
                 ].join(' ')}
                 src={layer.src}
                 autoPlay={!prefersReducedMotion}

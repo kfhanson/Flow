@@ -20,11 +20,13 @@ Flow should feel like a luxury fashion campaign translated into an ecommerce exp
 | `--border-strong` | Sharp borders | `rgba(255,255,255,0.12)` |
 
 ### 3.2 Typography
-- Primary typeface: `Plus Jakarta Sans`
-- Hero headline role: `Plus Jakarta Sans` ExtraBold or Bold with tight line height, large scale, and strong contrast against the black stage
+- Display typeface (headings only): `Fraunces`
+- Body/UI typeface: `Plus Jakarta Sans`
+- Hero headline role: `Fraunces` SemiBold with tight line height, large scale, and strong contrast against the black stage
+- Section heading role: `Fraunces` SemiBold, editorial scale
 - UI/body role: `Plus Jakarta Sans` Medium to SemiBold for navigation, product details, support answers, and cart UI
 - Scale guidance:
-  - Hero headline: `clamp(4rem, 7vw, 8rem)`
+  - Hero headline: `clamp(3rem, 7vw, 7.5rem)`
   - Section heading: `clamp(2rem, 3vw, 3.5rem)`
   - Card title: `1rem` to `1.25rem`
   - Body copy: `0.95rem` to `1rem`
@@ -46,7 +48,7 @@ Flow should feel like a luxury fashion campaign translated into an ecommerce exp
 #### Header
 - Transparent to solid transition on scroll
 - Left: `Flow` wordmark in red
-- Center/right: links to Story, Variants, Reviews, Related, Cart, Support
+- Center/right: links to Story, Variants, Reviews, Cart, Support
 - Utility detail: compact cart item count and total
 
 #### Hero Sequence
@@ -54,7 +56,7 @@ Flow should feel like a luxury fashion campaign translated into an ecommerce exp
 - Left or center: editorial copy introducing hero product drops
 - Right or full bleed: PixVerse video stage with changing product angles
 - Red vertical or horizontal progress rail tied to scroll position
-- Product metadata updates per shot: model name, category, material callout, price
+- Product metadata updates per shot: model name, category, materials (minimal), price
 - Microcopy line under headline: premium Indonesian craft meets street velocity
 
 #### Story Section
@@ -78,14 +80,10 @@ Flow should feel like a luxury fashion campaign translated into an ecommerce exp
 - Ratings presented cleanly, avoiding generic marketplace styling
 - Layout resembles a magazine review wall, not a commodity testimonial carousel
 
-#### Related Section
-- Horizontal release strip or asymmetric grid
-- Intended to feel like a curated drop list rather than algorithmic recommendations
-
-#### Cart Section
-- Sticky summary panel near the bottom of the flow
-- Selected items, quantities, subtotal, and a strong checkout intent button
-- Include reassurance copy: secure checkout, premium packaging, authentic release
+#### Cart
+- Cart lives as a navbar popup panel, not a separate page section
+- Selected items, quantities, subtotal, and an intent-focused CTA
+- Keep the cart surface solid so it reads clearly over the shared video backdrop
 
 ### 4.2 Support Page
 #### Hero Block

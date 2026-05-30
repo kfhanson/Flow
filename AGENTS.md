@@ -42,7 +42,7 @@ If any of these conflict, resolve them in this order:
 ## Implementation Priorities
 1. Hero scroll choreography
 2. Product storytelling and variant interaction
-3. Cart intent and sticky commerce summary
+3. Cart intent and header cart popup
 4. Support page with templated video answers
 5. Performance, accessibility, and production polish
 
@@ -54,7 +54,7 @@ If any of these conflict, resolve them in this order:
 - Support interactions should feel reassuring and composed, with calmer motion than the home page.
 
 ## Data And State Expectations
-- Use local typed data first for products, reviews, related items, and support templates.
+- Use local typed data first for products, reviews, and support templates.
 - Use a lightweight client-side store for cart state, active hero state, and support question state.
 - Keep pricing, labels, and section copy configurable from data modules where practical.
 

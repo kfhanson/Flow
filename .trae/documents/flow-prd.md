@@ -6,32 +6,31 @@ Flow is a premium Indonesian sneaker and footwear showcase site built for the TR
 ## 2. Core Features
 
 ### 2.1 Feature Module
-1. **Showcase home page**: cinematic hero, brand story, product variants, social proof, related products, sticky cart callout
+1. **Showcase home page**: cinematic hero, brand story, product variants, social proof, and a header cart popup
 2. **Support page**: customer support experience powered by a PixVerse-generated support host video and templated question-answer interactions
 
 ### 2.2 Page Details
 | Page Name | Module Name | Feature description |
 |-----------|-------------|---------------------|
-| Home page | Global header | Floating navigation with Flow wordmark in red, compact cart status, fast links to story, variants, reviews, related, and support |
+| Home page | Global header | Floating navigation with Flow wordmark in red, compact cart status, fast links to story, variants, reviews, cart, and support |
 | Home page | Scroll hero filmstrip | Full-screen scroll-driven sequence of PixVerse-generated video shots that reveal multiple hero products from different perspectives; timeline indicators, product labels, and CTA overlays update as the user scrolls |
 | Home page | Story section | Brand manifesto focused on premium Indonesian craft, streetwear credibility, and cinematic product identity |
 | Home page | Variant section | Interactive product cards for multiple sneakers/shoes, showing colorways, materials, silhouette notes, price, and quick add-to-cart actions |
 | Home page | Review section | Curated review cards, rating summary, and editorial pull-quotes designed like premium fashion press snippets |
-| Home page | Related section | Cross-sell products displayed as complementary releases or matching silhouettes |
-| Home page | Cart section | Persistent mini-cart summary with selected items, totals, and a clear purchase intent CTA |
+| Home page | Cart popup | Header-triggered cart popup with selected items, totals, and an intent-focused CTA; adding an item auto-opens the cart |
 | Support page | Support hero | Introductory support layout featuring a PixVerse-generated support person video and brand reassurance copy |
 | Support page | Template Q&A selector | Selectable templated customer questions such as shipping, sizing, authenticity, returns, and payment methods |
 | Support page | Answer stage | Visual answer panel synchronized with the support persona video, surfacing the relevant scripted response with clear key points |
 
 ## 3. Core Process
-Users land on the home page and are immediately pulled into the scroll-driven hero sequence, where cinematic video shots establish the premium identity of the featured shoes. As they continue downward, they move through story-led content, compare variants, evaluate reviews, inspect related products, and build cart intent. When they need reassurance, they can open the support page, choose a templated question, and receive a video-led answer from the support persona.
+Users land on the home page and are immediately pulled into the scroll-driven hero sequence, where cinematic video shots establish the premium identity of the featured shoes. As they continue downward, they move through story-led content, compare variants, evaluate reviews, and build cart intent via a header cart popup. When they need reassurance, they can open the support page, choose a templated question, and receive a video-led answer from the support persona.
 
 ```mermaid
 flowchart TD
     A["User opens Flow"] --> B["User scrolls through PixVerse hero sequence"]
     B --> C["User explores brand story"]
     C --> D["User compares product variants"]
-    D --> E["User checks reviews and related products"]
+    D --> E["User checks reviews"]
     E --> F["User adds items to cart"]
     B --> G["User opens support page"]
     G --> H["User selects templated support question"]
@@ -56,8 +55,7 @@ flowchart TD
 | Home page | Story section | Split editorial grid, dramatic typography, craft details, subtle texture and grain overlays |
 | Home page | Variant section | Product cards with material swatches, angle thumbnails, price block, add-to-cart actions, hover-driven reveal states |
 | Home page | Review section | Review cards styled like premium magazine snippets with star ratings and customer identity tags |
-| Home page | Related section | Horizontal release gallery, strong cover imagery, concise product metadata |
-| Home page | Cart section | Sticky summary module, item count, subtotal, premium checkout CTA, trust copy |
+| Home page | Cart popup | Header-triggered popup, item count, subtotal, intent-focused CTA, trust copy |
 | Support page | Support hero | Full-bleed support video frame, side panel copy, reassurance messaging, brand-stable black/red palette |
 | Support page | Template Q&A selector | Pill or card selectors with active red state, responsive content switcher, answer summary text |
 | Support page | Answer stage | Transcript block, highlighted keywords, response duration cue, smooth fade transitions |

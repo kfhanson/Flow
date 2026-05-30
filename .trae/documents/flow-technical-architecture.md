@@ -77,8 +77,9 @@ export type CartItem = {
 |------|----------------|
 | `src/pages/HomePage.tsx` | Main showcase page composition |
 | `src/pages/SupportPage.tsx` | Support page composition |
+| `src/components/shell/SiteHeader.tsx` | Global header, navigation, and cart popup UI |
 | `src/components/hero/*` | Scroll-driven hero panels, timeline, overlays |
-| `src/components/commerce/*` | Story, variants, reviews, related products, cart summary |
+| `src/components/commerce/*` | Story, variants, and reviews sections |
 | `src/components/support/*` | Support video stage, templated question selector, answer details |
 | `src/store/*` | Zustand stores |
 | `src/data/*` | Mock products, reviews, support templates |

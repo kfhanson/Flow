@@ -22,7 +22,7 @@ flowchart LR
 ```
 
 ## Core Routes
-- `/`: premium single-page showcase with hero, story, variants, reviews, related products, and cart summary
+- `/`: premium single-page showcase with hero, story, variants, reviews, and a header cart popup
 - `/support`: support experience with a PixVerse-generated host video and templated answers
 
 ## Frontend Layers
@@ -37,7 +37,7 @@ flowchart LR
 - shared sticky backdrop orchestration with section-triggered scene swaps
 - scroll-driven hero copy and product state
 - product storytelling sections
-- cart intent UI
+- cart intent UI (header popup)
 
 ### Support Layer
 - support host video stage
@@ -47,7 +47,6 @@ flowchart LR
 ### Data Layer
 - typed product data
 - review data
-- related-product data
 - support question and answer data
 
 ### State Layer

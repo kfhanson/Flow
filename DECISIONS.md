@@ -29,7 +29,7 @@
 
 ### D-006: Local Typed Data As Initial CMS
 - Status: accepted
-- Decision: store product, review, related-item, and support-answer content in typed frontend data modules
+- Decision: store product, review, and support-answer content in typed frontend data modules
 - Why: the content set is curated and small, so static typed data is faster and less error-prone for the first release
 
 ### D-007: Support As Video-Led Templated Q&A
@@ -44,7 +44,7 @@
 
 ### D-009: Premium Editorial Direction Over Marketplace Patterns
 - Status: accepted
-- Decision: sections such as reviews and related products should feel curated and fashion-led, not generic marketplace UI
+- Decision: sections such as reviews and variants should feel curated and fashion-led, not generic marketplace UI
 - Why: a standard commodity ecommerce layout would weaken the distinctiveness of the brand
 
 ### D-010: Native Scroll Logic Before Heavy Animation Libraries
