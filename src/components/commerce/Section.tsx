@@ -39,7 +39,9 @@ export default function Section({
     >
       <Container
         className={[
-          fullPage ? 'flex min-h-screen items-center py-20' : 'py-16',
+          fullPage
+            ? 'flex min-h-screen flex-col items-stretch justify-center py-24 md:py-28'
+            : 'py-16',
         ]
           .filter(Boolean)
           .join(' ')}
@@ -52,7 +54,7 @@ export default function Section({
         <h2 className="font-display text-4xl font-semibold tracking-tight text-text-primary md:text-5xl">
           {title}
         </h2>
-        <div className="mt-8">{children}</div>
+        <div className="mt-12 md:mt-14">{children}</div>
       </Container>
     </section>
   )
