@@ -1,17 +1,11 @@
 import { useEffect } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { products } from '../../data/products'
 import { useCartStore } from '../../store/cartStore'
 import { formatIDRCurrency } from '../../utils/formatCurrency'
 import Container from './Container'
 
-function useIsHomeRoute() {
-  const location = useLocation()
-  return location.pathname === '/'
-}
-
 export default function SiteHeader() {
-  const isHomeRoute = useIsHomeRoute()
   const items = useCartStore((s) => s.items)
   const cartItemCount = useCartStore((s) => s.itemCount())
   const subtotal = useCartStore((s) => s.subtotalIDR())
@@ -39,19 +33,15 @@ export default function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-6 text-sm text-text-muted md:flex">
-          {isHomeRoute ? (
-            <>
-              <a href="#story" className="hover:text-text-primary">
-                Story
-              </a>
-              <a href="#variants" className="hover:text-text-primary">
-                Variants
-              </a>
-              <a href="#reviews" className="hover:text-text-primary">
-                Reviews
-              </a>
-            </>
-          ) : null}
+          <Link to="/#story" className="hover:text-text-primary">
+            Story
+          </Link>
+          <Link to="/#variants" className="hover:text-text-primary">
+            Variants
+          </Link>
+          <Link to="/#reviews" className="hover:text-text-primary">
+            Reviews
+          </Link>
           <NavLink
             to="/support"
             className={({ isActive }) =>
