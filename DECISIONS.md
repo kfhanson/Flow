@@ -52,19 +52,21 @@
 - Decision: prefer browser-native scroll handling and lightweight React logic before adding heavier animation dependencies
 - Why: the experience is media-heavy already, so keeping the interaction layer lean improves performance headroom
 
+### D-011: Plus Jakarta Sans As Primary Typography
+- Status: accepted
+- Decision: use `Plus Jakarta Sans` as the primary typeface across hero copy, navigation, section titles, metadata, and supporting commerce UI
+- Why: it preserves a clean modern premium feel while staying sharp, readable, and versatile enough for both large cinematic headlines and small utility text
+
 ## Pending Decisions
 
-### P-001: Final Font Pairing
-- Status: pending
-- Question: which exact display serif and body sans pair should ship in the UI?
-
-### P-002: Video Asset Packaging
+### P-001: Video Asset Packaging
 - Status: pending
 - Question: whether final PixVerse assets should ship as local static files, CDN assets, or mixed delivery
 
-### P-003: Cart CTA Destination
+### P-002: Cart CTA Destination
 - Status: pending
 - Question: should the primary cart CTA open a modal, a summary drawer, or a separate checkout-intent route?
 
 ## Change Log
 - 2026-05-30: initial decision set created from the planning phase
+- 2026-05-30: locked `Plus Jakarta Sans` as the primary brand typography

@@ -10,10 +10,13 @@ Project phase: planning and documentation
 - Defined the dedicated `/support` page with a PixVerse-generated support host and templated Q&A behavior
 - Created the planning documents in `.trae/documents/`
 - Added repository-level operational docs: `AGENTS.md`, `PROGRESS.md`, `DECISIONS.md`, `features.json`, and `ARCHITECTURE.md`
+- Locked `Plus Jakarta Sans` as the primary brand typography
+- Added a detailed hero product direction, seven-shot hero sequence, and PixVerse prompt base for `Flow Velocity 01`
 
 ## In Progress
 - Converting the planning set into an actual React + Vite implementation
 - Finalizing the asset plan for PixVerse product sequences and support-host video responses
+- Turning the hero planning into a buildable prototype section
 
 ## Next
 - Scaffold the frontend project

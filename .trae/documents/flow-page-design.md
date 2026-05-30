@@ -20,14 +20,20 @@ Flow should feel like a luxury fashion campaign translated into an ecommerce exp
 | `--border-strong` | Sharp borders | `rgba(255,255,255,0.12)` |
 
 ### 3.2 Typography
-- Display font role: high-contrast editorial serif with strong luxury attitude for hero headings and quote moments
-- UI/body font role: refined neo-grotesk sans for navigation, product details, support answers, and cart UI
+- Primary typeface: `Plus Jakarta Sans`
+- Hero headline role: `Plus Jakarta Sans` ExtraBold or Bold with tight line height, large scale, and strong contrast against the black stage
+- UI/body role: `Plus Jakarta Sans` Medium to SemiBold for navigation, product details, support answers, and cart UI
 - Scale guidance:
   - Hero headline: `clamp(4rem, 7vw, 8rem)`
   - Section heading: `clamp(2rem, 3vw, 3.5rem)`
   - Card title: `1rem` to `1.25rem`
   - Body copy: `0.95rem` to `1rem`
   - Meta labels: `0.72rem` to `0.8rem`
+- Usage guidance:
+  - Use 800 for the hero headline and major numeric/stat moments
+  - Use 700 for section titles and product names
+  - Use 600 for navigation, labels, CTAs, and key metadata
+  - Use 500 for paragraph copy and supporting product descriptions
 
 ### 3.3 Surfaces and Effects
 - Panels use layered charcoal surfaces with fine borders and subtle inner highlights
@@ -115,7 +121,90 @@ Flow should feel like a luxury fashion campaign translated into an ecommerce exp
 - Top-down lace and tongue macro
 - Multi-product lineup reveal on black reflective floor
 
-### 6.2 Support Host Shot Types
+### 6.2 Featured Hero Product Direction
+- Hero product name: `Flow Velocity 01`
+- Product type: premium performance running shoe
+- Shape language: aerodynamic, sharp, fast, and slightly futuristic
+- Material direction: engineered black mesh upper, sculpted performance midsole, premium rubber outsole, deep red accent details
+- Color balance: mostly black and graphite, with crimson used in controlled trims, edge details, outsole accents, or light reflections
+- Product goal: feel exclusive, desirable, elite, and suitable for the first impression of the homepage
+
+### 6.3 Hero Scroll Shot List
+#### Shot 1: Shadow Reveal
+- Framing: front three-quarter angle emerging from darkness
+- Camera: slow dolly-in with tiny left-to-right drift
+- Focus: overall silhouette and first red accent hit
+- Purpose: establish mystery and premium presence
+
+#### Shot 2: Power Profile
+- Framing: low-angle lateral side profile
+- Camera: smooth horizontal tracking move
+- Focus: aerodynamic shape, speed lines, sculpted sole
+- Purpose: communicate motion, performance, and authority
+
+#### Shot 3: Material Macro
+- Framing: extreme close-up on mesh, lace cage, and stitch transitions
+- Camera: precise slow glide across the upper
+- Focus: craftsmanship, texture, and premium construction
+- Purpose: sell quality and Indonesian-made detail storytelling
+
+#### Shot 4: Heel Signature
+- Framing: macro close-up on heel counter and rear branding zone
+- Camera: short orbital move with reflective light sweep
+- Focus: rear construction, structure, and red edge highlight
+- Purpose: create a memorable signature product moment
+
+#### Shot 5: Outsole Strike
+- Framing: low-angle underside and midsole detail
+- Camera: controlled tilt and push with shallow depth of field
+- Focus: traction geometry, sole sculpting, performance feel
+- Purpose: reinforce the running-shoe identity
+
+#### Shot 6: Top-Down Precision
+- Framing: top-down beauty shot
+- Camera: subtle rotation or locked composition with moving light
+- Focus: lacing, tongue, shape symmetry, and upper patterning
+- Purpose: give the hero sequence one clean editorial fashion frame
+
+#### Shot 7: Final Hero Lockup
+- Framing: centered beauty composition on a reflective black floor
+- Camera: mostly still, with atmospheric movement and soft glow shifts
+- Focus: full product identity, premium finish, final red accents
+- Purpose: land the hero with a strong conversion-ready product state
+
+### 6.4 PixVerse Prompt Base
+- Prompt intent: cinematic luxury product commercial for `Flow Velocity 01`, a premium Indonesian running shoe
+- Required visual cues: dark reflective studio, graphite environment, deep red accent lighting, photoreal detail, clean atmosphere, no people, no text overlays, no clutter
+- Camera behavior: slow orbit, dolly, macro glides, low-angle power shots, controlled motion blur, shallow depth of field
+- Mood keywords: premium, cinematic, editorial, modern, elite, fast, desirable, refined
+
+### 6.5 PixVerse Master Prompt
+```text
+Cinematic luxury product commercial for Flow Velocity 01, a fictional premium Indonesian running shoe for the Flow brand. The shoe is sleek, modern, performance-driven, and fashion-forward, with a matte black engineered mesh upper, sculpted graphite midsole, premium outsole geometry, and deep crimson red accents. Dark luxury studio environment, reflective black floor, subtle graphite background, dramatic high-contrast lighting, controlled red edge light, polished highlights, soft haze, photorealistic premium sportswear campaign aesthetic.
+
+Camera language: slow front three-quarter orbit, low-angle side-profile tracking shot, close-up detail passes on mesh texture, laces, heel counter, and outsole, elegant macro transitions, smooth cinematic dolly movement, shallow depth of field, controlled motion blur, premium editorial framing.
+
+Mood and tone: bold, premium, modern, cinematic, fast, confident, elite, desirable, refined. The shoe must feel exclusive and suitable for a homepage hero section.
+
+Constraints: single hero shoe only, no people, no clutter, no packaging, no storefront UI, no floating text, no captions, no watermark, no extra props, no colorful background, no cartoon look.
+
+Color direction: mostly black and graphite with restrained deep red accents only.
+
+Output: photorealistic cinematic product ad, luxury sportswear commercial, polished studio finish, smooth premium motion.
+```
+
+### 6.6 PixVerse Negative Prompt
+- no people
+- no text
+- no watermark
+- no logo overlay
+- no extra shoes
+- no colorful set
+- no messy reflections
+- no exaggerated CGI look
+- no busy background
+
+### 6.7 Support Host Shot Types
 - Mid-shot speaking directly to camera
 - Slight side-angle emphasis for answer transitions
 - Controlled hand gesture moments for reassurance
