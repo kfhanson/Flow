@@ -1,0 +1,206 @@
+{
+  "product": {
+    "name": "Flow",
+    "type": "ecommerce shoes assistant",
+    "stage": "documentation-reset"
+  },
+  "brand": {
+    "primaryColors": ["black", "graphite", "red"],
+    "wordmarkColor": "red",
+    "tone": [
+      "premium",
+      "helpful",
+      "direct",
+      "modern",
+      "commerce-focused"
+    ]
+  },
+  "routes": [
+    {
+      "path": "/",
+      "name": "assistant-storefront",
+      "description": "Assistant-first ecommerce shoe shopping experience"
+    },
+    {
+      "path": "/chat",
+      "name": "assistant",
+      "description": "Optional dedicated chat route if a modal is not enough"
+    }
+  ],
+  "features": [
+    {
+      "id": "assistant-entry",
+      "title": "Assistant-first shopping entry",
+      "status": "planned",
+      "behavior": {
+        "trigger": "user opens Flow or clicks Start shopping",
+        "updates": [
+          "assistant welcome message appears",
+          "suggested prompt chips are visible",
+          "user can type a custom prompt"
+        ]
+      }
+    },
+    {
+      "id": "mock-intent-router",
+      "title": "Deterministic mock assistant router",
+      "status": "planned",
+      "behavior": {
+        "input": "free text or suggested prompt",
+        "rules": [
+          "normalize text",
+          "match a supported ecommerce intent",
+          "return predefined structured response",
+          "ask one clarifying question when required fields are missing"
+        ],
+        "constraints": [
+          "no live LLM call",
+          "no database query",
+          "same supported input returns same response"
+        ]
+      }
+    },
+    {
+      "id": "product-discovery",
+      "title": "Product discovery",
+      "status": "planned",
+      "behavior": {
+        "content": [
+          "mock shoes and sneakers",
+          "category",
+          "price",
+          "colorway",
+          "available sizes",
+          "reason for recommendation"
+        ],
+        "filters": [
+          "name",
+          "brand",
+          "category",
+          "color",
+          "price range",
+          "use case"
+        ]
+      }
+    },
+    {
+      "id": "product-detail",
+      "title": "Product detail response",
+      "status": "planned",
+      "behavior": {
+        "content": [
+          "name",
+          "price",
+          "category",
+          "materials",
+          "sizes",
+          "colorways",
+          "fit note",
+          "stock cue"
+        ],
+        "actions": [
+          "add to bag",
+          "find store stock"
+        ]
+      }
+    },
+    {
+      "id": "shopping-bag",
+      "title": "Mock shopping bag",
+      "status": "planned",
+      "behavior": {
+        "state": [
+          "selected items",
+          "size",
+          "color",
+          "quantity",
+          "subtotal"
+        ],
+        "scope": "demo purchase intent without real checkout"
+      }
+    },
+    {
+      "id": "store-locator",
+      "title": "Mock store locator",
+      "status": "planned",
+      "behavior": {
+        "data": "local mock stores",
+        "updates": [
+          "stores sorted by mock distance",
+          "pickup availability shown",
+          "stock summary shown"
+        ],
+        "presentation": "store cards first; map optional"
+      }
+    },
+    {
+      "id": "delivery-methods",
+      "title": "Delivery method response",
+      "status": "planned",
+      "behavior": {
+        "methods": [
+          "Store Pickup",
+          "Standard Delivery",
+          "Express Delivery"
+        ],
+        "content": [
+          "description",
+          "cost",
+          "estimated delivery time"
+        ]
+      }
+    },
+    {
+      "id": "mock-order-flow",
+      "title": "Mock order flow",
+      "status": "planned",
+      "behavior": {
+        "requirements": [
+          "non-empty bag",
+          "selected store",
+          "selected delivery method",
+          "sufficient mock inventory"
+        ],
+        "updates": [
+          "creates in-memory pending order",
+          "clears bag",
+          "shows order summary"
+        ]
+      }
+    },
+    {
+      "id": "order-status",
+      "title": "Mock order status",
+      "status": "planned",
+      "behavior": {
+        "content": [
+          "order id",
+          "status",
+          "store",
+          "items",
+          "delivery method",
+          "total"
+        ],
+        "emptyState": "friendly no-orders response"
+      }
+    },
+    {
+      "id": "inventory-summary",
+      "title": "Inventory summary",
+      "status": "planned",
+      "behavior": {
+        "query": "store plus brand/category",
+        "result": "number of matching products with quantity greater than zero"
+      }
+    }
+  ],
+  "constraints": {
+    "architecture": "mock backend contract with local service implementation first",
+    "data": "local typed mock data",
+    "llm": "not used in initial build",
+    "database": "not used in initial build",
+    "auth": "not required in initial build",
+    "payments": "not implemented",
+    "designApproach": "assistant-first responsive ecommerce"
+  }
+}
