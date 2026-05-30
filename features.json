@@ -116,16 +116,20 @@
         "media": "PixVerse-generated support host video",
         "questions": [
           "shipping in Indonesia",
+          "international shipping",
           "size guidance",
           "authenticity guarantee",
           "returns and exchanges",
-          "payment options"
+          "payment options",
+          "order tracking",
+          "product care"
         ],
         "interaction": [
           "user selects a templated question",
           "answer panel updates",
           "video cue and supporting copy stay synchronized"
-        ]
+        ],
+        "contentSource": "support-qa.json"
       }
     }
   ],
