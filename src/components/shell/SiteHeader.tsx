@@ -106,7 +106,8 @@ export default function SiteHeader() {
                 <div className="mt-4 grid max-h-[50vh] gap-3 overflow-auto pr-1">
                   {items.length === 0 ? (
                     <div className="rounded-xl border border-border-strong bg-bg-panel/40 p-4 text-sm text-text-muted">
-                      No selections yet.
+                      Your cart is empty. Add a pair to start building your Flow
+                      selection.
                     </div>
                   ) : (
                     items.map((item) => {
@@ -180,18 +181,13 @@ export default function SiteHeader() {
                     </span>
                   </div>
                   <div className="mt-3 text-xs leading-relaxed text-text-muted">
-                    Intent cart only—no checkout flow in the hackathon build.
+                    A clean summary of what you are considering now, with totals
+                    held here while you compare finish, fit, and silhouette.
                   </div>
-                  <button
-                    type="button"
-                    className="mt-4 w-full rounded-xl bg-brand-red px-4 py-3 text-sm font-semibold text-text-primary transition hover:bg-brand-red/90"
-                  >
-                    Continue with intent
-                  </button>
                   {items.length > 0 ? (
                     <button
                       type="button"
-                      className="mt-3 w-full text-xs text-text-muted underline decoration-border-strong underline-offset-4 hover:text-text-primary"
+                      className="mt-4 w-full text-xs text-text-muted underline decoration-border-strong underline-offset-4 hover:text-text-primary"
                       onClick={() => clear()}
                     >
                       Clear cart

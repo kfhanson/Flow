@@ -28,7 +28,9 @@ export type SupportQuestion = {
   shortPrompt: string
   answerTitle: string
   answerBody: string
+  keyPoints: string[]
   videoCue: string
+  cta: string
 }
 
 export type CartItem = {

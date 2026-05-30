@@ -17,11 +17,12 @@ export default function SupportStage() {
               Support
             </div>
             <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight text-text-primary md:text-5xl">
-              Calm answers. No noise.
+              Clear answers, handled with calm precision.
             </h1>
             <p className="mt-4 max-w-[56ch] text-sm leading-relaxed text-text-muted">
-              Select a question and the answer panel will stay synchronized with a
-              dedicated support-host video cue.
+              Select a question to read the exact answer the Flow support host is
+              designed to deliver: clear, direct, and steady from first reply to
+              final reassurance.
             </p>
 
             <div className="mt-10 grid gap-3">
@@ -53,9 +54,15 @@ export default function SupportStage() {
             <div className="overflow-hidden rounded-3xl border border-border-strong bg-bg-panel">
               <div className="relative aspect-[16/12] w-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-red-soft/70 via-transparent to-transparent" />
-                <div className="absolute inset-0 grid place-items-center">
+                <div className="absolute inset-x-6 bottom-6 rounded-2xl border border-border-strong bg-bg-primary/45 p-5 backdrop-blur">
                   <div className="text-xs uppercase tracking-[0.18em] text-text-muted">
-                    Support host video stage
+                    Flow support
+                  </div>
+                  <div className="mt-2 text-lg font-semibold tracking-tight text-text-primary">
+                    {active.label}
+                  </div>
+                  <div className="mt-2 text-sm leading-relaxed text-text-muted">
+                    {active.shortPrompt}
                   </div>
                 </div>
               </div>
@@ -68,8 +75,24 @@ export default function SupportStage() {
               <div className="mt-3 text-sm leading-relaxed text-text-primary">
                 {active.answerBody}
               </div>
-              <div className="mt-6 text-xs text-text-muted">
-                Video cue: <span className="text-text-primary">{active.videoCue}</span>
+              <div className="mt-6 grid gap-2">
+                {active.keyPoints.map((point) => (
+                  <div
+                    key={point}
+                    className="rounded-xl border border-border-strong bg-bg-panel/40 px-4 py-3 text-xs text-text-muted"
+                  >
+                    {point}
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 text-xs uppercase tracking-[0.18em] text-text-muted">
+                Delivery note
+              </div>
+              <div className="mt-2 text-sm leading-relaxed text-text-primary">
+                {active.videoCue}
+              </div>
+              <div className="mt-6 rounded-xl border border-border-strong bg-bg-panel/40 px-4 py-3 text-sm text-text-primary">
+                {active.cta}
               </div>
             </div>
           </div>

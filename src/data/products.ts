@@ -3,12 +3,13 @@ import type { ProductVariant } from './types'
 export const products: ProductVariant[] = [
   {
     id: 'flow-velocity-black-red',
-    name: 'Velocity One',
-    category: 'Sneaker',
+    name: 'Flow Velocity 01',
+    category: 'Runner',
     price: 1899000,
     accent: 'brand.red',
-    description: 'A flagship drop built for night streets and studio light.',
-    materials: ['Full-grain leather', 'Carbon mesh', 'Red lacquer eyelets'],
+    description:
+      'The flagship silhouette: a fast, sculpted runner finished for late-city light and all-day pace.',
+    materials: ['Engineered mesh upper', 'Sculpted foam midsole', 'Crimson outsole trim'],
     angles: [
       {
         id: 'three-quarter',
@@ -26,12 +27,13 @@ export const products: ProductVariant[] = [
   },
   {
     id: 'flow-arc-runner-graphite',
-    name: 'Arc Runner',
+    name: 'Flow Arc Runner',
     category: 'Runner',
     price: 1599000,
     accent: 'brand.red',
-    description: 'Neutral graphite with a sharp red cadence underfoot.',
-    materials: ['Engineered knit', 'TPU cage', 'Impact foam'],
+    description:
+      'A lighter graphite runner with a quieter upper and a sharper underfoot response.',
+    materials: ['Graphite knit shell', 'Support cage frame', 'Impact-tuned foam'],
     angles: [
       {
         id: 'lateral',
@@ -49,12 +51,13 @@ export const products: ProductVariant[] = [
   },
   {
     id: 'flow-tan-leather-mid',
-    name: 'Tan Leather Mid',
+    name: 'Flow Linea Mid',
     category: 'Leather',
     price: 2099000,
     accent: 'brand.red',
-    description: 'Elevated leather with a restrained, editorial silhouette.',
-    materials: ['Vegetable-tanned leather', 'Waxed laces', 'Rubber cupsole'],
+    description:
+      'A leather-led mid cut that brings editorial structure, cleaner lines, and a more dressed finish.',
+    materials: ['Premium leather upper', 'Waxed lace system', 'Cushioned cupsole'],
     angles: [
       {
         id: 'orbit',

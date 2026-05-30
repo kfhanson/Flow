@@ -9,7 +9,7 @@ export default function VariantsSection() {
   return (
     <Section
       id="variants"
-      title="Variants built for the night shift"
+      title="Three ways to wear the Flow silhouette"
       eyebrow="Variants"
       backdropScene="commerce"
       fullPage

@@ -14,7 +14,6 @@ import {
 
 type BackdropLayer = {
   id: BackdropSceneId
-  label: string
   src?: string
   overlayClassName: string
 }
@@ -119,27 +118,23 @@ export default function ShowcaseBackdrop() {
     () => [
       {
         id: 'hero',
-        label: 'Hero sequence',
         overlayClassName:
           'bg-[radial-gradient(circle_at_72%_30%,rgba(208,17,27,0.26),transparent_42%),linear-gradient(180deg,rgba(6,6,6,0.1),rgba(6,6,6,0.58)_58%,rgba(6,6,6,0.88))]',
       },
       {
         id: 'story',
-        label: 'Story transition',
         src: storyVideo,
         overlayClassName:
           'bg-[radial-gradient(circle_at_28%_24%,rgba(208,17,27,0.18),transparent_38%),linear-gradient(180deg,rgba(6,6,6,0.2),rgba(6,6,6,0.62)_56%,rgba(6,6,6,0.9))]',
       },
       {
         id: 'commerce',
-        label: 'Commerce atmosphere',
         src: commerceSrc,
         overlayClassName:
           'bg-[linear-gradient(180deg,rgba(6,6,6,0.48),rgba(6,6,6,0.74)_48%,rgba(6,6,6,0.94)),radial-gradient(circle_at_50%_16%,rgba(255,255,255,0.05),transparent_40%)]',
       },
       {
         id: 'ambient',
-        label: 'Ambient hold',
         overlayClassName:
           'bg-[linear-gradient(180deg,rgba(6,6,6,0.72),rgba(6,6,6,0.88)_42%,rgba(6,6,6,0.98))]',
       },
@@ -245,10 +240,6 @@ export default function ShowcaseBackdrop() {
           </div>
         )
       })}
-
-      <div className="absolute left-6 top-24 rounded-full border border-border-strong bg-bg-primary/45 px-3 py-2 text-[11px] uppercase tracking-[0.2em] text-text-muted backdrop-blur">
-        {layers.find((layer) => layer.id === activeBackdropScene)?.label}
-      </div>
     </div>
   )
 }

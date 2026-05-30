@@ -13,7 +13,7 @@ export default function ReviewsSection() {
   return (
     <Section
       id="reviews"
-      title="Curated proof, not marketplace noise"
+      title="Early wearers, clear signal"
       eyebrow="Reviews"
       backdropScene="commerce"
       fullPage
@@ -27,7 +27,8 @@ export default function ReviewsSection() {
             Average rating
           </div>
           <div className="mt-6 text-sm leading-relaxed text-text-muted">
-            Reviews are styled like editorial pull-quotes—clear signal, no clutter.
+            A tighter edit of what stands out most: comfort, finish, silhouette,
+            and how the pair holds its presence through a full day.
           </div>
         </div>
         <div className="grid gap-6 md:col-span-8 md:grid-cols-2">

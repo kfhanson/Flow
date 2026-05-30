@@ -7,6 +7,6 @@ type SupportState = {
 }
 
 export const useSupportStore = create<SupportState>((set) => ({
-  selectedQuestionId: supportQuestions[0]?.id ?? 'shipping-id',
+  selectedQuestionId: supportQuestions[0]?.id ?? 'shipping-indonesia',
   selectQuestion: (questionId) => set({ selectedQuestionId: questionId }),
 }))

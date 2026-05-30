@@ -23,6 +23,8 @@ Project phase: hero media integrated + cart prototype
 - Applied `Plus Jakarta Sans` in the live UI stylesheet
 - Removed the Related section from the home page
 - Moved cart from a page section into a navbar popup; adding a product auto-opens the cart
+- Replaced placeholder-facing copy with a more final brand voice across the hero, story, reviews, cart, and support surfaces
+- Synced the support page to the richer multi-question Q&A content set
 
 ## In Progress
 - Implementing support host video playback and cue syncing per selected question

@@ -3,23 +3,26 @@ import type { ReviewItem } from './types'
 export const reviews: ReviewItem[] = [
   {
     id: 'rev-1',
-    author: 'Nadya',
+    author: 'Nadya A.',
     location: 'Jakarta',
     rating: 5,
-    quote: 'The build feels like a studio prop—sharp edges, zero softness.',
+    quote:
+      'The silhouette lands immediately. It feels premium without trying too hard, and the finish still looks sharp after a full day out.',
   },
   {
     id: 'rev-2',
-    author: 'Raka',
+    author: 'Raka P.',
     location: 'Bandung',
     rating: 5,
-    quote: 'Comfort is quiet. The silhouette is loud—in the right way.',
+    quote:
+      'Comfort stays quiet, but the profile does the talking. It wears like a performance shoe with the restraint of a fashion piece.',
   },
   {
     id: 'rev-3',
-    author: 'Sinta',
+    author: 'Sinta R.',
     location: 'Surabaya',
     rating: 4,
-    quote: 'Materials read premium up close. Packaging is clean and serious.',
+    quote:
+      'Up close, the materials and color balance feel considered. Even the packaging reads like a limited release, not a generic shipment.',
   },
 ]

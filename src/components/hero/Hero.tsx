@@ -19,19 +19,21 @@ export default function Hero() {
       [
         {
           id: products[0]?.id ?? 'hero-01',
-          eyebrow: 'Hero drop',
-          headline: 'Night-built. Studio sharp.',
+          eyebrow: 'Flow Velocity 01',
+          headline: 'Built for the city after dark.',
           product: products[0] ?? products[products.length - 1],
-          microcopy: 'Premium Indonesian craft meets street velocity.',
-          sceneNote: 'Shadow reveal and first accent hit',
+          microcopy:
+            'A premium Indonesian runner shaped for speed, refined in every line, and cut to hold attention under low light.',
+          sceneNote: 'White launch colorway',
         },
         {
           id: products[1]?.id ?? 'hero-02',
-          eyebrow: 'Hero drop',
-          headline: 'Velocity without the noise.',
+          eyebrow: 'Flow Arc Runner',
+          headline: 'One silhouette. More than one attitude.',
           product: products[1] ?? products[products.length - 1],
-          microcopy: 'Premium Indonesian craft meets street velocity.',
-          sceneNote: 'Profile transition with motion-led framing',
+          microcopy:
+            'From clean white to graphite and black, the collection keeps the same sharp stance while the mood shifts with the light.',
+          sceneNote: 'Graphite and black transition',
         },
       ],
     [],
@@ -83,7 +85,7 @@ export default function Hero() {
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border-strong bg-bg-primary/35 px-4 py-2 text-xs uppercase tracking-[0.22em] text-text-muted backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-red" />
               <span>{activeScene.eyebrow}</span>
-              <span className="text-text-primary/70">Flow Velocity 01</span>
+              <span className="text-text-primary/70">Premium Indonesian footwear</span>
             </div>
             <h1 className="max-w-[10ch] text-balance text-5xl font-extrabold tracking-tight text-text-primary md:text-7xl">
               {activeScene.headline}
@@ -97,7 +99,7 @@ export default function Hero() {
                 href="#variants"
                 className="rounded-full bg-brand-red px-5 py-3 text-sm font-semibold text-text-primary transition hover:bg-brand-red/90"
               >
-                Explore variants
+                Explore the lineup
               </a>
               <a
                 href="#story"
@@ -124,7 +126,7 @@ export default function Hero() {
             <div className="w-full max-w-md rounded-[2rem] border border-border-strong bg-bg-primary/40 p-6 shadow-2xl shadow-black/30 backdrop-blur-md">
               <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.18em] text-text-muted">
                 <span>{activeScene.sceneNote}</span>
-                <span className="text-text-primary/75">PixVerse stage</span>
+                <span className="text-text-primary/75">Current focus</span>
               </div>
 
               <div className="mt-7 grid gap-3 rounded-2xl border border-border-strong bg-bg-elevated/50 p-5">
@@ -157,12 +159,12 @@ export default function Hero() {
 
               <div className="mt-6 rounded-2xl border border-border-strong bg-bg-primary/30 p-4">
                 <div className="text-xs uppercase tracking-[0.18em] text-text-muted">
-                  Scroll trigger
+                  Story line
                 </div>
                 <div className="mt-2 text-sm leading-relaxed text-text-primary">
-                  The background video now changes by section, so the story and
-                  commerce areas inherit their own mood without breaking the page
-                  flow.
+                  Flow is premium Indonesian movement, shaped for speed, refined
+                  in every detail, and built to carry confidence from city
+                  streets to every step ahead.
                 </div>
               </div>
             </div>
