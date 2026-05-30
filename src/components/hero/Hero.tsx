@@ -87,7 +87,7 @@ export default function Hero() {
               <span>{activeScene.eyebrow}</span>
               <span className="text-text-primary/70">Premium Indonesian footwear</span>
             </div>
-            <h1 className="max-w-[10ch] text-balance text-5xl font-extrabold tracking-tight text-text-primary md:text-7xl">
+            <h1 className="max-w-[12ch] font-display text-balance text-[clamp(3rem,7vw,7.5rem)] font-semibold leading-[0.95] tracking-tight text-text-primary">
               {activeScene.headline}
             </h1>
             <p className="mt-5 max-w-[48ch] text-sm leading-relaxed text-text-primary/84 md:text-base">
@@ -123,49 +123,30 @@ export default function Hero() {
           </div>
 
           <div className="md:col-span-5 md:justify-self-end">
-            <div className="w-full max-w-md rounded-[2rem] border border-border-strong bg-bg-primary/40 p-6 shadow-2xl shadow-black/30 backdrop-blur-md">
-              <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.18em] text-text-muted">
-                <span>{activeScene.sceneNote}</span>
-                <span className="text-text-primary/75">Current focus</span>
+            <div className="w-full max-w-sm rounded-2xl border border-border-strong bg-bg-panel/80 p-5 backdrop-blur">
+              <div className="mb-4 text-xs uppercase tracking-[0.18em] text-text-muted">
+                {activeScene.sceneNote}
               </div>
-
-              <div className="mt-7 grid gap-3 rounded-2xl border border-border-strong bg-bg-elevated/50 p-5">
-                <div className="flex items-baseline justify-between gap-4">
-                  <div className="text-sm font-semibold text-text-primary">
-                    {activeScene.product.name}
-                  </div>
-                  <div className="text-sm text-text-primary">
-                    {formatIDRCurrency(activeScene.product.price)}
-                  </div>
+              <div className="flex items-baseline justify-between gap-4">
+                <div className="text-sm font-semibold text-text-primary">
+                  {activeScene.product.name}
                 </div>
-                <div className="text-xs uppercase tracking-[0.18em] text-text-muted">
-                  {activeScene.product.category}
+                <div className="text-sm text-text-primary">
+                  {formatIDRCurrency(activeScene.product.price)}
                 </div>
-                <p className="text-sm leading-relaxed text-text-muted">
-                  {activeScene.product.description}
-                </p>
               </div>
-
-              <div className="mt-5 flex flex-wrap gap-2">
-                {activeScene.product.materials.slice(0, 3).map((material) => (
+              <div className="mt-1 text-xs uppercase tracking-[0.18em] text-text-muted">
+                {activeScene.product.category}
+              </div>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {activeScene.product.materials.slice(0, 2).map((material) => (
                   <span
                     key={material}
-                    className="rounded-full border border-border-strong bg-bg-primary/35 px-3 py-1 text-xs text-text-muted"
+                    className="rounded-full border border-border-strong bg-bg-primary/20 px-3 py-1 text-xs text-text-muted"
                   >
                     {material}
                   </span>
                 ))}
-              </div>
-
-              <div className="mt-6 rounded-2xl border border-border-strong bg-bg-primary/30 p-4">
-                <div className="text-xs uppercase tracking-[0.18em] text-text-muted">
-                  Story line
-                </div>
-                <div className="mt-2 text-sm leading-relaxed text-text-primary">
-                  Flow is premium Indonesian movement, shaped for speed, refined
-                  in every detail, and built to carry confidence from city
-                  streets to every step ahead.
-                </div>
               </div>
             </div>
           </div>

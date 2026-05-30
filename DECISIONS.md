@@ -62,6 +62,16 @@
 - Decision: use a shared sticky background media layer on the home page and switch active videos discretely as sections become dominant in the viewport
 - Why: this better matches the cinematic campaign direction than keeping video trapped inside a card and allows story-led transitions without overwhelming every section
 
+### D-013: Editorial Display Serif Paired With Plus Jakarta Sans
+- Status: accepted
+- Decision: use `Fraunces` (via the `font-display` utility / `--font-display` token) for hero headlines, section titles, the story pull-quote, and the featured review; keep `Plus Jakarta Sans` for all body, navigation, metadata, and commerce UI. Refines D-011 from a single-typeface to a display+body pairing.
+- Why: a high-contrast serif delivers the fashion-editorial luxury attitude the design direction calls for, which a single grotesk could not carry on its own
+
+### D-014: Tailwind v4 Must Load The JS Config Via `@config`
+- Status: accepted
+- Decision: `src/index.css` must keep the `@config '../tailwind.config.cjs';` directive immediately after `@import 'tailwindcss';`
+- Why: Tailwind v4 with `@tailwindcss/postcss` does NOT auto-load a legacy JS config. Without `@config`, every custom-named utility (`bg-brand-red`, `text-text-muted`, `bg-bg-panel`, `border-border-strong`, `font-display`, etc.) silently emits nothing and the brand system breaks. Do not remove this line.
+
 ## Pending Decisions
 
 ### P-001: Video Asset Packaging

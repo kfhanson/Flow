@@ -1,7 +1,11 @@
 # PROGRESS.md
 
 ## Current Status
-Project phase: hero media integrated + cart prototype
+Project phase: hero media integrated + cart prototype + landing-page editorial UI pass
+
+## Recent
+- Fixed a root-cause styling bug: Tailwind v4 was not loading `tailwind.config.cjs`, so all custom-named utilities (brand red, panels, muted text, borders) silently emitted nothing. Added `@config '../tailwind.config.cjs';` to `src/index.css` — brand system now applies (see D-014).
+- Landing-page P1 editorial pass: added Fraunces display serif (`font-display`) for hero/section headlines, story pull-quote, and featured review (D-013); scaled the hero headline to a fluid clamp and slimmed the hero product panel; converted variant "Add to cart" buttons to ghost-fill (red reserved as accent); added editorial index numbers to section eyebrows and an asymmetric reviews wall.
 
 ## Completed
 - Established the core concept for `Flow` as a premium Indonesian footwear showcase site for the TRAE x PixVerse hackathon

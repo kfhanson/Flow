@@ -2,6 +2,7 @@ module.exports = {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
+      fontFamily: { display: ['var(--font-display)'] },
       colors: {
         bg: {
           primary: 'var(--bg-primary)',

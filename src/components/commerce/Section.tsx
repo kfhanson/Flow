@@ -6,6 +6,7 @@ type SectionProps = {
   id: string
   title: string
   eyebrow?: string
+  index?: number
   backdropScene?: BackdropSceneId
   fullPage?: boolean
   children: ReactNode
@@ -15,10 +16,16 @@ export default function Section({
   id,
   title,
   eyebrow,
+  index,
   backdropScene = 'ambient',
   fullPage = false,
   children,
 }: SectionProps) {
+  const eyebrowText =
+    eyebrow && index != null
+      ? `${String(index).padStart(2, '0')} — ${eyebrow}`
+      : eyebrow
+
   return (
     <section
       id={id}
@@ -37,12 +44,12 @@ export default function Section({
           .filter(Boolean)
           .join(' ')}
       >
-        {eyebrow ? (
+        {eyebrowText ? (
           <div className="mb-3 text-xs uppercase tracking-[0.18em] text-text-muted">
-            {eyebrow}
+            {eyebrowText}
           </div>
         ) : null}
-        <h2 className="text-3xl font-semibold tracking-tight text-text-primary md:text-4xl">
+        <h2 className="font-display text-4xl font-semibold tracking-tight text-text-primary md:text-5xl">
           {title}
         </h2>
         <div className="mt-8">{children}</div>

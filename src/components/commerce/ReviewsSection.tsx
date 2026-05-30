@@ -15,12 +15,13 @@ export default function ReviewsSection() {
       id="reviews"
       title="Early wearers, clear signal"
       eyebrow="Reviews"
+      index={3}
       backdropScene="commerce"
       fullPage
     >
       <div className="grid gap-6 md:grid-cols-12">
         <div className="rounded-2xl border border-border-strong bg-bg-elevated/50 p-8 md:col-span-4">
-          <div className="text-5xl font-semibold tracking-tight text-text-primary">
+          <div className="font-display text-6xl font-semibold tracking-tight text-text-primary">
             {avg.toFixed(1)}
           </div>
           <div className="mt-2 text-xs uppercase tracking-[0.18em] text-text-muted">
@@ -31,13 +32,21 @@ export default function ReviewsSection() {
             and how the pair holds its presence through a full day.
           </div>
         </div>
-        <div className="grid gap-6 md:col-span-8 md:grid-cols-2">
-          {reviews.map((review) => (
+        <div className="grid gap-6 md:col-span-8 md:grid-cols-6">
+          {reviews.map((review, i) => (
             <div
               key={review.id}
-              className="rounded-2xl border border-border-strong bg-bg-panel p-6"
+              className={[
+                'rounded-2xl border border-border-strong bg-bg-panel p-6',
+                i === 0 ? 'md:col-span-4 md:row-span-2' : 'md:col-span-2',
+              ].join(' ')}
             >
-              <div className="text-sm leading-relaxed text-text-primary">
+              <div
+                className={[
+                  'leading-relaxed text-text-primary',
+                  i === 0 ? 'font-display text-xl' : 'text-sm',
+                ].join(' ')}
+              >
                 “{review.quote}”
               </div>
               <div className="mt-5 flex items-center justify-between gap-4 text-xs text-text-muted">

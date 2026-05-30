@@ -11,6 +11,7 @@ export default function VariantsSection() {
       id="variants"
       title="Three ways to wear the Flow silhouette"
       eyebrow="Variants"
+      index={2}
       backdropScene="commerce"
       fullPage
     >
@@ -52,7 +53,7 @@ export default function VariantsSection() {
             <button
               type="button"
               onClick={() => addItem(product.id)}
-              className="mt-6 w-full rounded-xl bg-brand-red px-4 py-3 text-sm font-semibold text-text-primary transition hover:bg-brand-red/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
+              className="mt-6 w-full rounded-xl border border-border-strong bg-transparent px-4 py-3 text-sm font-semibold text-text-primary transition hover:border-brand-red hover:bg-brand-red focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
             >
               Add to cart
             </button>
