@@ -114,6 +114,251 @@
       ],
       "videoCue": "Softer and more lifestyle-oriented delivery",
       "cta": "Follow the care guidance to extend product life"
+    },
+    {
+      "id": "chatbot-help",
+      "label": "Chatbot: Capabilities",
+      "shortPrompt": "What can you help me with?",
+      "answerTitle": "Here is what Flow can do in chat",
+      "answerBody": "Welcome to Flow. I can help you find shoes, compare product details, add pairs to your bag, find nearby Flow stores, show delivery options, place a mock order, and check mock order status. Try asking for black sneakers, red accent shoes under Rp 1.500.000, Flow Runner details, or Flow stores near Jakarta.",
+      "keyPoints": [
+        "Product discovery and comparisons",
+        "Bag actions and mock order flow",
+        "Stores, delivery options, and order status"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Ask for a product recommendation"
+    },
+    {
+      "id": "chatbot-black-daily-sneakers",
+      "label": "Chatbot: Black daily sneakers",
+      "shortPrompt": "I am looking for black sneakers for daily city wear",
+      "answerTitle": "Black city wear picks",
+      "answerBody": "Good matches for black daily city wear: Flow Metro Low, Flow Runner, and Flow Office Slip. Look at the chat panel for more details.",
+      "keyPoints": [
+        "Flow Metro Low",
+        "Flow Runner",
+        "Flow Office Slip"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Ask for details on one pick"
+    },
+    {
+      "id": "chatbot-red-accent-under-budget",
+      "label": "Chatbot: Red accent under budget",
+      "shortPrompt": "Show red accent sneakers under Rp 1.500.000",
+      "answerTitle": "Red accent picks under Rp 1.500.000",
+      "answerBody": "Red-accent picks under Rp 1.500.000: Flow Runner and Flow Court Ace. Look at the chat panel for more details.",
+      "keyPoints": [
+        "Flow Runner",
+        "Flow Court Ace"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Compare the two options"
+    },
+    {
+      "id": "chatbot-flow-runner-detail",
+      "label": "Chatbot: Flow Runner details",
+      "shortPrompt": "Tell me more about Flow Runner",
+      "answerTitle": "Flow Runner details",
+      "answerBody": "Flow Runner costs Rp 1.299.000 and comes in black/red and graphite. It is a cushioned runner with engineered mesh, synthetic overlays, a foam midsole, and a rubber outsole. Sizes available: 40, 41, 42, 43, 44. It fits true to size and is available at Flow Senayan and Flow Kemang.",
+      "keyPoints": [
+        "Price: Rp 1.299.000",
+        "Colors: black/red, graphite",
+        "Sizes: 40–44, true to size"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Add Flow Runner with size and color"
+    },
+    {
+      "id": "chatbot-add-flow-runner-missing-options",
+      "label": "Chatbot: Add Flow Runner (needs options)",
+      "shortPrompt": "Add Flow Runner to my bag",
+      "answerTitle": "Choose size and color",
+      "answerBody": "Which Flow Runner size and color should I add? Available sizes: 40, 41, 42, 43, 44. Available colors: black/red, graphite. Try: Add Flow Runner, size 42, black/red to my bag.",
+      "keyPoints": [
+        "Sizes: 40, 41, 42, 43, 44",
+        "Colors: black/red, graphite"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Reply with size and color"
+    },
+    {
+      "id": "chatbot-add-flow-runner-complete",
+      "label": "Chatbot: Add to bag (confirmed)",
+      "shortPrompt": "Add Flow Runner, size 42, black/red to my bag",
+      "answerTitle": "Added to your bag",
+      "answerBody": "Added to your bag: Flow Runner, color black/red, size 42, quantity 1. Price: Rp 1.299.000. Bag subtotal: Rp 1.299.000.",
+      "keyPoints": [
+        "Flow Runner, black/red, size 42",
+        "Quantity: 1",
+        "Subtotal: Rp 1.299.000"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Ask to show your bag"
+    },
+    {
+      "id": "chatbot-show-bag-with-item",
+      "label": "Chatbot: Show bag (with items)",
+      "shortPrompt": "Show my bag",
+      "answerTitle": "Your bag summary",
+      "answerBody": "Raka, here is your bag: Flow Runner, size 42, black/red, quantity 1. Line total: Rp 1.299.000. Subtotal: Rp 1.299.000.",
+      "keyPoints": [
+        "Flow Runner, size 42, black/red",
+        "Line total: Rp 1.299.000",
+        "Subtotal: Rp 1.299.000"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Place a mock order for pickup"
+    },
+    {
+      "id": "chatbot-show-bag-empty",
+      "label": "Chatbot: Show bag (empty)",
+      "shortPrompt": "Show my bag when the bag is empty",
+      "answerTitle": "Your bag is empty",
+      "answerBody": "Raka, your bag is empty. Try asking for black sneakers for daily city wear or red accent sneakers under Rp 1.500.000.",
+      "keyPoints": [
+        "No items in bag",
+        "Try product discovery prompts to start"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Ask for black daily sneakers"
+    },
+    {
+      "id": "chatbot-find-stores-jakarta",
+      "label": "Chatbot: Stores near Jakarta",
+      "shortPrompt": "Find Flow stores near Jakarta",
+      "answerTitle": "Nearby Flow stores",
+      "answerBody": "Here are Flow stores near Jakarta: Flow Senayan at Plaza Senayan, 2.1 km away; Flow Kemang on Jl. Kemang Raya, 5.8 km away; and Flow PIK at Pantai Indah Kapuk, 14.4 km away. All support pickup.",
+      "keyPoints": [
+        "Flow Senayan (2.1 km)",
+        "Flow Kemang (5.8 km)",
+        "Flow PIK (14.4 km)"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Ask for delivery options by store"
+    },
+    {
+      "id": "chatbot-delivery-flow-senayan",
+      "label": "Chatbot: Delivery options (Senayan)",
+      "shortPrompt": "Show delivery options for Flow Senayan",
+      "answerTitle": "Delivery options for Flow Senayan",
+      "answerBody": "Delivery options for Flow Senayan: Store Pickup is Rp 0 and ready in 2 hours. Standard Delivery is Rp 35.000 and takes 2-4 business days. Express Delivery is Rp 75.000 and arrives the same day for orders before 14:00.",
+      "keyPoints": [
+        "Store Pickup: Rp 0, ready in 2 hours",
+        "Standard Delivery: Rp 35.000, 2–4 business days",
+        "Express Delivery: Rp 75.000, same day before 14:00"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Place a mock order for pickup"
+    },
+    {
+      "id": "chatbot-place-order-pickup",
+      "label": "Chatbot: Place mock order (pickup)",
+      "shortPrompt": "Place an order for pickup at Flow Senayan",
+      "answerTitle": "Mock order created",
+      "answerBody": "Mock order created. Order ID: FLW-1001. Status: pending. Store: Flow Senayan. Method: Store Pickup. Items: Flow Runner, size 42, black/red x1. Total: Rp 1.299.000. This is demo state only. No payment was processed and no real order was sent.",
+      "keyPoints": [
+        "Order ID: FLW-1001",
+        "Store pickup at Flow Senayan",
+        "Demo only, no payment processed"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Check your mock order status"
+    },
+    {
+      "id": "chatbot-place-order-empty-bag",
+      "label": "Chatbot: Place mock order (empty bag)",
+      "shortPrompt": "Place an order for pickup at Flow Senayan when the bag is empty",
+      "answerTitle": "Add an item first",
+      "answerBody": "Your bag is empty, so I cannot create a mock order yet. Try asking: Add Flow Runner, size 42, black/red to my bag.",
+      "keyPoints": [
+        "Bag is empty",
+        "Add a product before placing a mock order"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Add Flow Runner, size 42, black/red"
+    },
+    {
+      "id": "chatbot-order-status",
+      "label": "Chatbot: Order status",
+      "shortPrompt": "Check my order status",
+      "answerTitle": "Mock order status",
+      "answerBody": "Raka, here is your mock order status. Order ID: FLW-1001. Status: pending. Store: Flow Senayan. Method: Store Pickup. Pickup estimate: ready in 2 hours. Total: Rp 1.299.000.",
+      "keyPoints": [
+        "Order ID: FLW-1001",
+        "Status: pending",
+        "Pickup estimate: ready in 2 hours"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Ask for delivery options"
+    },
+    {
+      "id": "chatbot-order-status-empty",
+      "label": "Chatbot: Order status (no orders)",
+      "shortPrompt": "Check my order status when there are no orders",
+      "answerTitle": "No mock orders yet",
+      "answerBody": "Raka, you have no mock orders yet. Try adding a product to your bag first: Add Flow Runner, size 42, black/red to my bag.",
+      "keyPoints": [
+        "No mock orders found",
+        "Add a product to start a mock order"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Add Flow Runner to your bag"
+    },
+    {
+      "id": "chatbot-flow-runner-availability",
+      "label": "Chatbot: Runner availability (Senayan)",
+      "shortPrompt": "Is Flow Runner available at Flow Senayan?",
+      "answerTitle": "Flow Runner availability at Flow Senayan",
+      "answerBody": "Flow Runner is available at Flow Senayan. Available options: black/red in sizes 40, 41, 42, 43 and graphite in sizes 41, 42, 44.",
+      "keyPoints": [
+        "Available at Flow Senayan",
+        "Black/red: sizes 40–43",
+        "Graphite: sizes 41, 42, 44"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Add Flow Runner with size and color"
+    },
+    {
+      "id": "chatbot-runner-stock-flow-senayan",
+      "label": "Chatbot: Inventory summary (Senayan)",
+      "shortPrompt": "How many runner shoes are in stock at Flow Senayan?",
+      "answerTitle": "Runner inventory summary",
+      "answerBody": "Inventory summary: Flow Senayan has 1 Flow runner product in stock. Available runner: Flow Runner.",
+      "keyPoints": [
+        "1 runner product in stock",
+        "Available runner: Flow Runner"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Ask about runner availability by size"
+    },
+    {
+      "id": "chatbot-compare-runner-metro",
+      "label": "Chatbot: Compare Runner vs Metro Low",
+      "shortPrompt": "Compare Flow Runner and Flow Metro Low",
+      "answerTitle": "Runner vs Metro Low",
+      "answerBody": "Flow Runner is Rp 1.299.000 and is better for running, long walks, and cushioned daily movement. Flow Metro Low is Rp 1.099.000 and is better for clean everyday styling and travel. Choose Flow Runner for comfort and performance. Choose Flow Metro Low for a lower-profile daily sneaker.",
+      "keyPoints": [
+        "Flow Runner: Rp 1.299.000, comfort and performance",
+        "Flow Metro Low: Rp 1.099.000, clean everyday styling",
+        "Choose based on use case"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Ask for a recommendation by use case"
+    },
+    {
+      "id": "chatbot-fallback-hats",
+      "label": "Chatbot: Unsupported request",
+      "shortPrompt": "Do you sell hats?",
+      "answerTitle": "Only shoes in the demo",
+      "answerBody": "I can only help with the Flow mock shoe catalog right now. Try asking for black sneakers, red accent shoes under Rp 1.500.000, Flow Runner details, or stores near Jakarta.",
+      "keyPoints": [
+        "Limited to mock shoe catalog",
+        "Try product discovery prompts"
+      ],
+      "videoCue": "Chatbot demo response",
+      "cta": "Ask for black daily sneakers"
     }
   ]
 }
