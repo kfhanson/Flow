@@ -7,7 +7,12 @@ export default function VariantsSection() {
   const addItem = useCartStore((s) => s.addItem)
 
   return (
-    <Section id="variants" title="Variants built for the night shift" eyebrow="Variants">
+    <Section
+      id="variants"
+      title="Variants built for the night shift"
+      eyebrow="Variants"
+      backdropScene="commerce"
+    >
       <div className="grid gap-6 md:grid-cols-12">
         {products.map((product) => (
           <div

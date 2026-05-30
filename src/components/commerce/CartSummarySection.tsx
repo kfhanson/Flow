@@ -14,7 +14,12 @@ export default function CartSummarySection() {
   const subtotal = useCartStore((s) => s.subtotalIDR())
 
   return (
-    <Section id="cart" title="Cart intent" eyebrow="Cart">
+    <Section
+      id="cart"
+      title="Cart intent"
+      eyebrow="Cart"
+      backdropScene="ambient"
+    >
       <div className="grid gap-6 md:grid-cols-12">
         <div className="rounded-2xl border border-border-strong bg-bg-panel p-6 md:col-span-8">
           {items.length === 0 ? (

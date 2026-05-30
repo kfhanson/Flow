@@ -18,9 +18,21 @@ export default function Hero() {
     () =>
       products.map((p, index) => ({
         id: p.id,
-        headline: index === 0 ? 'Night-built. Studio sharp.' : p.name,
+        eyebrow: index === 0 ? 'Hero drop' : `Scene ${index + 1}`,
+        headline:
+          index === 0
+            ? 'Night-built. Studio sharp.'
+            : index === 1
+              ? 'Velocity without the noise.'
+              : 'Cut for low light and long miles.',
         product: p,
         microcopy: 'Premium Indonesian craft meets street velocity.',
+        sceneNote:
+          index === 0
+            ? 'Shadow reveal and first accent hit'
+            : index === 1
+              ? 'Profile transition with motion-led framing'
+              : 'Material close-up and final lockup energy',
       })),
     [],
   )
@@ -60,59 +72,98 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
+      id="top"
+      data-home-scene="hero"
       className="relative"
       style={{ height: `${Math.max(3, scenes.length + 1) * 100}vh` }}
     >
       <div className="sticky top-0 h-screen">
-        <Container className="grid h-full grid-cols-1 items-center gap-10 py-12 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <div className="mb-4 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-text-muted">
-              <span className="h-1 w-10 rounded-full bg-brand-red/70" />
-              <span>Scroll</span>
+        <Container className="grid h-full grid-cols-1 items-end gap-8 pb-10 pt-24 md:grid-cols-12 md:items-center">
+          <div className="md:col-span-7">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-border-strong bg-bg-primary/35 px-4 py-2 text-xs uppercase tracking-[0.22em] text-text-muted backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-red" />
+              <span>{activeScene.eyebrow}</span>
+              <span className="text-text-primary/70">Flow Velocity 01</span>
             </div>
-            <h1 className="text-balance text-5xl font-semibold tracking-tight text-text-primary md:text-7xl">
+            <h1 className="max-w-[10ch] text-balance text-5xl font-extrabold tracking-tight text-text-primary md:text-7xl">
               {activeScene.headline}
             </h1>
-            <p className="mt-4 max-w-[46ch] text-sm leading-relaxed text-text-muted">
+            <p className="mt-5 max-w-[48ch] text-sm leading-relaxed text-text-primary/84 md:text-base">
               {activeScene.microcopy}
             </p>
 
-            <div className="mt-10 grid gap-2 rounded-2xl border border-border-strong bg-bg-elevated/60 p-5">
-              <div className="flex items-baseline justify-between gap-4">
-                <div className="text-sm font-medium text-text-primary">
-                  {activeScene.product.name}
-                </div>
-                <div className="text-sm text-text-primary">
-                  {formatIDRCurrency(activeScene.product.price)}
-                </div>
-              </div>
-              <div className="text-xs text-text-muted">
-                {activeScene.product.category} · {activeScene.product.materials[0]}
-              </div>
-            </div>
-          </div>
-
-          <div className="relative md:col-span-7">
-            <div className="relative overflow-hidden rounded-3xl border border-border-strong bg-bg-panel">
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-red-soft/70 via-transparent to-transparent" />
-              <div className="relative aspect-[16/10] w-full">
-                <div className="absolute inset-0 grid place-items-center">
-                  <div className="text-xs uppercase tracking-[0.18em] text-text-muted">
-                    PixVerse video stage
-                  </div>
-                </div>
-              </div>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <a
+                href="#variants"
+                className="rounded-full bg-brand-red px-5 py-3 text-sm font-semibold text-text-primary transition hover:bg-brand-red/90"
+              >
+                Explore variants
+              </a>
+              <a
+                href="#story"
+                className="rounded-full border border-border-strong bg-bg-primary/35 px-5 py-3 text-sm font-semibold text-text-primary backdrop-blur transition hover:border-brand-red/60"
+              >
+                Read the story
+              </a>
             </div>
 
-            <div className="mt-6 flex items-center gap-3">
-              <div className="h-1 flex-1 overflow-hidden rounded-full bg-bg-elevated">
+            <div className="mt-10 flex items-center gap-3">
+              <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-bg-elevated/70">
                 <div
                   className="h-full bg-brand-red transition-[width] duration-200"
                   style={{ width: `${Math.round(heroProgress * 100)}%` }}
                 />
               </div>
-              <div className="w-16 text-right text-xs text-text-muted">
+              <div className="w-16 text-right text-xs uppercase tracking-[0.18em] text-text-muted">
                 {activeHeroSceneIndex + 1}/{scenes.length}
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-5 md:justify-self-end">
+            <div className="w-full max-w-md rounded-[2rem] border border-border-strong bg-bg-primary/40 p-6 shadow-2xl shadow-black/30 backdrop-blur-md">
+              <div className="flex items-center justify-between gap-4 text-xs uppercase tracking-[0.18em] text-text-muted">
+                <span>{activeScene.sceneNote}</span>
+                <span className="text-text-primary/75">PixVerse stage</span>
+              </div>
+
+              <div className="mt-7 grid gap-3 rounded-2xl border border-border-strong bg-bg-elevated/50 p-5">
+                <div className="flex items-baseline justify-between gap-4">
+                  <div className="text-sm font-semibold text-text-primary">
+                    {activeScene.product.name}
+                  </div>
+                  <div className="text-sm text-text-primary">
+                    {formatIDRCurrency(activeScene.product.price)}
+                  </div>
+                </div>
+                <div className="text-xs uppercase tracking-[0.18em] text-text-muted">
+                  {activeScene.product.category}
+                </div>
+                <p className="text-sm leading-relaxed text-text-muted">
+                  {activeScene.product.description}
+                </p>
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {activeScene.product.materials.slice(0, 3).map((material) => (
+                  <span
+                    key={material}
+                    className="rounded-full border border-border-strong bg-bg-primary/35 px-3 py-1 text-xs text-text-muted"
+                  >
+                    {material}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 rounded-2xl border border-border-strong bg-bg-primary/30 p-4">
+                <div className="text-xs uppercase tracking-[0.18em] text-text-muted">
+                  Scroll trigger
+                </div>
+                <div className="mt-2 text-sm leading-relaxed text-text-primary">
+                  The background video now changes by section, so the story and
+                  commerce areas inherit their own mood without breaking the page
+                  flow.
+                </div>
               </div>
             </div>
           </div>

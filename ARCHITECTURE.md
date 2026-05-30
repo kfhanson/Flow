@@ -34,7 +34,8 @@ flowchart LR
 - section spacing and shared layout primitives
 
 ### Showcase Layer
-- scroll-driven hero orchestration
+- shared sticky backdrop orchestration with section-triggered scene swaps
+- scroll-driven hero copy and product state
 - product storytelling sections
 - cart intent UI
 
@@ -79,12 +80,15 @@ src/
 
 ## Media Architecture
 - PixVerse-generated product videos act as primary hero media
+- The home page uses a shared full-viewport backdrop layer instead of section-local embedded video players
+- Sections declare a backdrop scene and the active media switches discretely as the user scrolls
 - Support-host videos act as the primary support interaction media
 - Poster images and fallback states are required to reduce layout shift and autoplay failure impact
 - Video loading must be staged so the hero feels immediate even if all clips are not yet loaded
 
 ## Rendering Strategy
-- Use a sticky or near-sticky hero viewport that translates scroll progress into scene changes
+- Use a sticky full-viewport backdrop that crossfades between media states as sections become dominant in the viewport
+- Keep hero copy and product metadata layered over the shared media stage
 - Keep content sections modular so the single-page experience remains maintainable
 - Separate support into its own route to reduce coupling between commerce storytelling and support interactions
 

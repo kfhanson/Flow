@@ -16,14 +16,17 @@ Project phase: scaffolded + initial implementation
 - Added Zustand stores for cart, showcase hero progress, and support selection
 - Added typed local mock data modules for products, reviews, and support Q&A
 - Added Vitest + React Testing Library and a smoke test for the app shell
+- Implemented a shared home-page video backdrop with discrete section-triggered transitions
+- Refactored the hero into content layered over the global media stage
+- Applied `Plus Jakarta Sans` in the live UI stylesheet
 
 ## In Progress
-- Replacing placeholder “video stages” with real PixVerse video + poster assets (hero + support host)
-- Iterating the scroll-driven hero choreography into the planned multi-shot sequence
+- Replacing placeholder “video stages” with real PixVerse video + poster assets (support host still pending)
+- Iterating the shared backdrop choreography into richer multi-shot section states
 
 ## Next
 - Refine global shell (header behavior, section nav, responsive adaptation)
-- Implement real hero media loading + scroll/video synchronization (with graceful fallback + reduced motion)
+- Expand discrete scene transitions beyond hero/story into more intentional section-specific media states
 - Upgrade variants (angle selector, hover previews) and cart intent UI (sticky summary behavior)
 - Implement support host video cues per question (calmer motion than home page)
 - Expand tests for cart and support interactions

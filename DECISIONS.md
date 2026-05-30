@@ -57,6 +57,11 @@
 - Decision: use `Plus Jakarta Sans` as the primary typeface across hero copy, navigation, section titles, metadata, and supporting commerce UI
 - Why: it preserves a clean modern premium feel while staying sharp, readable, and versatile enough for both large cinematic headlines and small utility text
 
+### D-012: Shared Backdrop With Discrete Section Triggers
+- Status: accepted
+- Decision: use a shared sticky background media layer on the home page and switch active videos discretely as sections become dominant in the viewport
+- Why: this better matches the cinematic campaign direction than keeping video trapped inside a card and allows story-led transitions without overwhelming every section
+
 ## Pending Decisions
 
 ### P-001: Video Asset Packaging

@@ -4,7 +4,12 @@ import Section from './Section'
 
 export default function RelatedSection() {
   return (
-    <Section id="related" title="Related drops" eyebrow="Related">
+    <Section
+      id="related"
+      title="Related drops"
+      eyebrow="Related"
+      backdropScene="ambient"
+    >
       <div className="grid gap-6 md:grid-cols-3">
         {products.map((p) => (
           <div

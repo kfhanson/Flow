@@ -11,7 +11,12 @@ export default function ReviewsSection() {
   const avg = averageRating()
 
   return (
-    <Section id="reviews" title="Curated proof, not marketplace noise" eyebrow="Reviews">
+    <Section
+      id="reviews"
+      title="Curated proof, not marketplace noise"
+      eyebrow="Reviews"
+      backdropScene="commerce"
+    >
       <div className="grid gap-6 md:grid-cols-12">
         <div className="rounded-2xl border border-border-strong bg-bg-elevated/50 p-8 md:col-span-4">
           <div className="text-5xl font-semibold tracking-tight text-text-primary">

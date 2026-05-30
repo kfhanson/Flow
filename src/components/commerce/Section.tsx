@@ -1,16 +1,28 @@
 import type { ReactNode } from 'react'
+import type { BackdropSceneId } from '../../store/showcaseStore'
 import Container from '../shell/Container'
 
 type SectionProps = {
   id: string
   title: string
   eyebrow?: string
+  backdropScene?: BackdropSceneId
   children: ReactNode
 }
 
-export default function Section({ id, title, eyebrow, children }: SectionProps) {
+export default function Section({
+  id,
+  title,
+  eyebrow,
+  backdropScene = 'ambient',
+  children,
+}: SectionProps) {
   return (
-    <section id={id} className="border-t border-border-strong bg-bg-primary">
+    <section
+      id={id}
+      data-home-scene={backdropScene}
+      className="relative border-t border-border-strong/80 bg-transparent"
+    >
       <Container className="py-16">
         {eyebrow ? (
           <div className="mb-3 text-xs uppercase tracking-[0.18em] text-text-muted">

@@ -2,7 +2,12 @@ import Section from './Section'
 
 export default function StorySection() {
   return (
-    <Section id="story" title="Flow is a campaign you can wear" eyebrow="Story">
+    <Section
+      id="story"
+      title="Flow is a campaign you can wear"
+      eyebrow="Story"
+      backdropScene="story"
+    >
       <div className="grid gap-6 md:grid-cols-12">
         <div className="rounded-2xl border border-border-strong bg-bg-panel p-8 md:col-span-5">
           <div className="text-sm leading-relaxed text-text-primary">

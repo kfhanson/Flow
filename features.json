@@ -31,15 +31,17 @@
     {
       "id": "hero-scroll-sequence",
       "title": "Scroll-driven hero sequence",
-      "status": "planned",
+      "status": "in_progress",
       "behavior": {
         "trigger": "user scroll",
         "media": "PixVerse-generated product videos",
         "updates": [
-          "active shot changes with scroll progress",
-          "headline and product metadata update per scene",
-          "timeline or progress rail reflects current position"
-        ]
+          "shared home-page background video changes by dominant section",
+          "hero headline and product metadata update per scene",
+          "timeline or progress rail reflects current position",
+          "story and commerce sections inherit discrete media moods"
+        ],
+        "rendering": "full-screen sticky backdrop with section-triggered transitions"
       }
     },
     {
