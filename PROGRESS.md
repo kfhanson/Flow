@@ -1,12 +1,12 @@
 # PROGRESS.md
 
 ## Current Status
-Project phase: scaffolded + initial implementation
+Project phase: hero media integrated + cart prototype
 
 ## Completed
 - Established the core concept for `Flow` as a premium Indonesian footwear showcase site for the TRAE x PixVerse hackathon
 - Defined the main experience as a single-page storefront with a scroll-driven PixVerse video hero
-- Defined downstream commerce sections: story, variants, reviews, related, and cart
+- Defined downstream commerce sections: story, variants, reviews, and cart
 - Defined the dedicated `/support` page with a PixVerse-generated support host and templated Q&A behavior
 - Created the planning documents in `.trae/documents/`
 - Added repository-level operational docs: `AGENTS.md`, `PROGRESS.md`, `DECISIONS.md`, `features.json`, and `ARCHITECTURE.md`
@@ -17,17 +17,20 @@ Project phase: scaffolded + initial implementation
 - Added typed local mock data modules for products, reviews, and support Q&A
 - Added Vitest + React Testing Library and a smoke test for the app shell
 - Implemented a shared home-page video backdrop with discrete section-triggered transitions
-- Refactored the hero into content layered over the global media stage
+- Integrated PixVerse hero videos with a 2-scene hero crossfade (`flow-hero-01` → `flow-hero-02`)
+- Wired `story.mp4` as the story-section background and set commerce to cycle `flow-hero-03` → `flow-hero-07`
+- Refactored the hero into content layered over the shared media stage
 - Applied `Plus Jakarta Sans` in the live UI stylesheet
+- Removed the Related section from the home page
+- Moved cart from a page section into a navbar popup; adding a product auto-opens the cart
 
 ## In Progress
-- Replacing placeholder “video stages” with real PixVerse video + poster assets (support host still pending)
-- Iterating the shared backdrop choreography into richer multi-shot section states
+- Implementing support host video playback and cue syncing per selected question
+- Iterating the shared backdrop choreography into more polished transitions and performance (posters, progressive loading)
 
 ## Next
 - Refine global shell (header behavior, section nav, responsive adaptation)
-- Expand discrete scene transitions beyond hero/story into more intentional section-specific media states
-- Upgrade variants (angle selector, hover previews) and cart intent UI (sticky summary behavior)
+- Upgrade variants (angle selector, hover previews) and cart popup polish (keyboard, focus, animations)
 - Implement support host video cues per question (calmer motion than home page)
 - Expand tests for cart and support interactions
 - Optimize video performance (poster fallbacks, progressive loading, lazy below-the-fold)

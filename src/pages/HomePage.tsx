@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react'
 import Hero from '../components/hero/Hero'
 import ShowcaseBackdrop from '../components/hero/ShowcaseBackdrop'
-import CartSummarySection from '../components/commerce/CartSummarySection'
-import RelatedSection from '../components/commerce/RelatedSection'
 import ReviewsSection from '../components/commerce/ReviewsSection'
 import StorySection from '../components/commerce/StorySection'
 import VariantsSection from '../components/commerce/VariantsSection'
@@ -70,8 +68,6 @@ export default function HomePage() {
         <StorySection />
         <VariantsSection />
         <ReviewsSection />
-        <RelatedSection />
-        <CartSummarySection />
       </div>
     </main>
   )

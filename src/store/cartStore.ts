@@ -4,6 +4,9 @@ import type { CartItem } from '../data/types'
 
 type CartState = {
   items: CartItem[]
+  lastAddedProductId: string | null
+  isCartOpen: boolean
+  setCartOpen: (open: boolean) => void
   addItem: (productId: string) => void
   removeItem: (productId: string) => void
   setQuantity: (productId: string, quantity: number) => void
@@ -19,17 +22,26 @@ function priceByProductId(productId: string) {
 
 export const useCartStore = create<CartState>((set, get) => ({
   items: [],
+  lastAddedProductId: null,
+  isCartOpen: false,
+  setCartOpen: (open) => set({ isCartOpen: open }),
   addItem: (productId) =>
     set((state) => {
       const existing = state.items.find((i) => i.productId === productId)
       if (existing) {
         return {
+          lastAddedProductId: productId,
+          isCartOpen: true,
           items: state.items.map((i) =>
             i.productId === productId ? { ...i, quantity: i.quantity + 1 } : i,
           ),
         }
       }
-      return { items: [...state.items, { productId, quantity: 1 }] }
+      return {
+        lastAddedProductId: productId,
+        isCartOpen: true,
+        items: [...state.items, { productId, quantity: 1 }],
+      }
     }),
   removeItem: (productId) =>
     set((state) => ({

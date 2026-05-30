@@ -16,6 +16,7 @@ export default function ReviewsSection() {
       title="Curated proof, not marketplace noise"
       eyebrow="Reviews"
       backdropScene="commerce"
+      fullPage
     >
       <div className="grid gap-6 md:grid-cols-12">
         <div className="rounded-2xl border border-border-strong bg-bg-elevated/50 p-8 md:col-span-4">

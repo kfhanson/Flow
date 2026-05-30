@@ -16,24 +16,24 @@ export default function Hero() {
 
   const scenes = useMemo(
     () =>
-      products.map((p, index) => ({
-        id: p.id,
-        eyebrow: index === 0 ? 'Hero drop' : `Scene ${index + 1}`,
-        headline:
-          index === 0
-            ? 'Night-built. Studio sharp.'
-            : index === 1
-              ? 'Velocity without the noise.'
-              : 'Cut for low light and long miles.',
-        product: p,
-        microcopy: 'Premium Indonesian craft meets street velocity.',
-        sceneNote:
-          index === 0
-            ? 'Shadow reveal and first accent hit'
-            : index === 1
-              ? 'Profile transition with motion-led framing'
-              : 'Material close-up and final lockup energy',
-      })),
+      [
+        {
+          id: products[0]?.id ?? 'hero-01',
+          eyebrow: 'Hero drop',
+          headline: 'Night-built. Studio sharp.',
+          product: products[0] ?? products[products.length - 1],
+          microcopy: 'Premium Indonesian craft meets street velocity.',
+          sceneNote: 'Shadow reveal and first accent hit',
+        },
+        {
+          id: products[1]?.id ?? 'hero-02',
+          eyebrow: 'Hero drop',
+          headline: 'Velocity without the noise.',
+          product: products[1] ?? products[products.length - 1],
+          microcopy: 'Premium Indonesian craft meets street velocity.',
+          sceneNote: 'Profile transition with motion-led framing',
+        },
+      ],
     [],
   )
 

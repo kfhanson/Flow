@@ -2,7 +2,7 @@
   "product": {
     "name": "Flow",
     "type": "premium Indonesian shoe and sneaker showcase",
-    "stage": "planning"
+    "stage": "in_progress"
   },
   "brand": {
     "primaryColors": ["black", "red"],
@@ -47,20 +47,21 @@
     {
       "id": "brand-story",
       "title": "Brand story section",
-      "status": "planned",
+      "status": "in_progress",
       "behavior": {
         "goal": "Explain Flow's premium Indonesian identity",
         "presentation": [
           "editorial layout",
           "manifesto-style copy",
-          "cinematic visual treatment"
+          "cinematic visual treatment",
+          "full-page panel"
         ]
       }
     },
     {
       "id": "product-variants",
       "title": "Variant exploration",
-      "status": "planned",
+      "status": "in_progress",
       "behavior": {
         "content": [
           "product name",
@@ -72,41 +73,41 @@
         "actions": [
           "select or preview a variant",
           "add item to cart"
-        ]
+        ],
+        "layout": "full-page panel"
       }
     },
     {
       "id": "reviews",
       "title": "Reviews section",
-      "status": "planned",
+      "status": "in_progress",
       "behavior": {
         "content": [
           "aggregate score",
           "customer quotes",
           "editorial pull quotes"
         ],
-        "presentation": "curated and premium, not marketplace-generic"
-      }
-    },
-    {
-      "id": "related-products",
-      "title": "Related products",
-      "status": "planned",
-      "behavior": {
-        "goal": "Cross-sell complementary releases",
-        "presentation": "curated release strip or asymmetric grid"
+        "presentation": "curated and premium, not marketplace-generic",
+        "layout": "full-page panel"
       }
     },
     {
       "id": "cart-summary",
-      "title": "Cart summary",
-      "status": "planned",
+      "title": "Cart popup",
+      "status": "in_progress",
       "behavior": {
         "state": [
           "selected items",
           "quantities",
           "subtotal"
         ],
+        "interaction": [
+          "click cart pill in header to open/close",
+          "adding a product auto-opens cart",
+          "remove item, quantity +/-",
+          "clear cart"
+        ],
+        "presentation": "navbar popup drawer",
         "scope": "intent-focused cart without full transactional checkout"
       }
     },

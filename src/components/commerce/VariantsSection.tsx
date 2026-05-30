@@ -12,6 +12,7 @@ export default function VariantsSection() {
       title="Variants built for the night shift"
       eyebrow="Variants"
       backdropScene="commerce"
+      fullPage
     >
       <div className="grid gap-6 md:grid-cols-12">
         {products.map((product) => (

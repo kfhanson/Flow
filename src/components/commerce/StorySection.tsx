@@ -7,6 +7,7 @@ export default function StorySection() {
       title="Flow is a campaign you can wear"
       eyebrow="Story"
       backdropScene="story"
+      fullPage
     >
       <div className="grid gap-6 md:grid-cols-12">
         <div className="rounded-2xl border border-border-strong bg-bg-panel p-8 md:col-span-5">
