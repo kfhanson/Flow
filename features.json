@@ -1,0 +1,138 @@
+{
+  "product": {
+    "name": "Flow",
+    "type": "premium Indonesian shoe and sneaker showcase",
+    "stage": "planning"
+  },
+  "brand": {
+    "primaryColors": ["black", "red"],
+    "wordmarkColor": "red",
+    "tone": [
+      "premium",
+      "cinematic",
+      "editorial",
+      "modern",
+      "fashion-forward"
+    ]
+  },
+  "routes": [
+    {
+      "path": "/",
+      "name": "showcase",
+      "description": "Single-page product showcase and ecommerce-style experience"
+    },
+    {
+      "path": "/support",
+      "name": "support",
+      "description": "Customer support page with video-led templated answers"
+    }
+  ],
+  "features": [
+    {
+      "id": "hero-scroll-sequence",
+      "title": "Scroll-driven hero sequence",
+      "status": "planned",
+      "behavior": {
+        "trigger": "user scroll",
+        "media": "PixVerse-generated product videos",
+        "updates": [
+          "active shot changes with scroll progress",
+          "headline and product metadata update per scene",
+          "timeline or progress rail reflects current position"
+        ]
+      }
+    },
+    {
+      "id": "brand-story",
+      "title": "Brand story section",
+      "status": "planned",
+      "behavior": {
+        "goal": "Explain Flow's premium Indonesian identity",
+        "presentation": [
+          "editorial layout",
+          "manifesto-style copy",
+          "cinematic visual treatment"
+        ]
+      }
+    },
+    {
+      "id": "product-variants",
+      "title": "Variant exploration",
+      "status": "planned",
+      "behavior": {
+        "content": [
+          "product name",
+          "colorway",
+          "materials",
+          "price",
+          "alternate angles or thumbnails"
+        ],
+        "actions": [
+          "select or preview a variant",
+          "add item to cart"
+        ]
+      }
+    },
+    {
+      "id": "reviews",
+      "title": "Reviews section",
+      "status": "planned",
+      "behavior": {
+        "content": [
+          "aggregate score",
+          "customer quotes",
+          "editorial pull quotes"
+        ],
+        "presentation": "curated and premium, not marketplace-generic"
+      }
+    },
+    {
+      "id": "related-products",
+      "title": "Related products",
+      "status": "planned",
+      "behavior": {
+        "goal": "Cross-sell complementary releases",
+        "presentation": "curated release strip or asymmetric grid"
+      }
+    },
+    {
+      "id": "cart-summary",
+      "title": "Cart summary",
+      "status": "planned",
+      "behavior": {
+        "state": [
+          "selected items",
+          "quantities",
+          "subtotal"
+        ],
+        "scope": "intent-focused cart without full transactional checkout"
+      }
+    },
+    {
+      "id": "support-video-answers",
+      "title": "Support page with templated video answers",
+      "status": "planned",
+      "behavior": {
+        "media": "PixVerse-generated support host video",
+        "questions": [
+          "shipping in Indonesia",
+          "size guidance",
+          "authenticity guarantee",
+          "returns and exchanges",
+          "payment options"
+        ],
+        "interaction": [
+          "user selects a templated question",
+          "answer panel updates",
+          "video cue and supporting copy stay synchronized"
+        ]
+      }
+    }
+  ],
+  "constraints": {
+    "architecture": "frontend-only for initial hackathon build",
+    "data": "local typed mock data",
+    "designApproach": "desktop-first",
+    "motionRule": "premium and restrained, never noisy"
+  }
+}
