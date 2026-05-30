@@ -18,7 +18,7 @@ export default function VariantsSection() {
         {products.map((product) => (
           <div
             key={product.id}
-            className="group flex flex-col rounded-2xl border border-border-strong bg-bg-panel p-6 transition hover:border-brand-red/60 md:col-span-4"
+            className="group rounded-2xl border border-border-strong bg-bg-panel p-6 transition hover:border-brand-red/60 md:col-span-4"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -49,15 +49,13 @@ export default function VariantsSection() {
               ))}
             </div>
 
-            <div className="mt-auto pt-6">
-              <button
-                type="button"
-                onClick={() => addItem(product.id)}
-                className="w-full rounded-2xl border border-brand-red/60 bg-brand-red-soft/40 px-4 py-3 text-sm font-semibold text-text-primary transition hover:bg-brand-red-soft/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
-              >
-                Add to cart
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={() => addItem(product.id)}
+              className="mt-6 w-full rounded-xl bg-brand-red px-4 py-3 text-sm font-semibold text-text-primary transition hover:bg-brand-red/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
+            >
+              Add to cart
+            </button>
           </div>
         ))}
       </div>
