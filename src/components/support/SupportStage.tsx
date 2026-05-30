@@ -49,8 +49,10 @@ export default function SupportStage() {
   const activeSlotRef = useRef<'a' | 'b'>('a')
   const [pendingSlot, setPendingSlot] = useState<'a' | 'b' | null>(null)
   const pendingSlotRef = useRef<'a' | 'b' | null>(null)
+  const [aKey, setAKey] = useState(0)
   const [aSrc, setASrc] = useState(supportHelpVideoSrc)
   const [aLoop, setALoop] = useState(false)
+  const [bKey, setBKey] = useState(0)
   const [bSrc, setBSrc] = useState<string | null>(null)
   const [bLoop, setBLoop] = useState(false)
   const videoARef = useRef<HTMLVideoElement | null>(null)
@@ -157,10 +159,12 @@ export default function SupportStage() {
 
   function setSlotSource(slot: 'a' | 'b', src: string, loop: boolean) {
     if (slot === 'a') {
+      setAKey((prev) => prev + 1)
       setASrc(src)
       setALoop(loop)
       return
     }
+    setBKey((prev) => prev + 1)
     setBSrc(src)
     setBLoop(loop)
   }
@@ -194,7 +198,7 @@ export default function SupportStage() {
     }
     mutedRef.current = true
     setMuted(true)
-    const el = getVideoEl(activeSlot)
+    const el = getVideoEl(activeSlotRef.current)
     if (el) {
       el.muted = true
     }
@@ -202,6 +206,7 @@ export default function SupportStage() {
 
   function switchTo(src: string, loop: boolean) {
     const incoming: 'a' | 'b' = activeSlotRef.current === 'a' ? 'b' : 'a'
+    pendingSlotRef.current = incoming
     setPendingSlot(incoming)
     setSlotSource(incoming, src, loop)
   }
@@ -240,6 +245,8 @@ export default function SupportStage() {
           outgoingEl.pause()
           outgoingEl.currentTime = 0
         }
+        activeSlotRef.current = slot
+        pendingSlotRef.current = null
         setActiveSlot(slot)
         setPendingSlot(null)
       } else if (activeSlotRef.current !== slot) {
@@ -327,7 +334,7 @@ export default function SupportStage() {
                   <div className="relative h-full w-full bg-black">
                     <video
                       ref={videoARef}
-                      key={aSrc}
+                      key={`${aKey}-${aSrc}`}
                       src={aSrc}
                       className={[
                         'absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ease-in-out',
@@ -343,7 +350,7 @@ export default function SupportStage() {
                     {bSrc ? (
                       <video
                         ref={videoBRef}
-                        key={bSrc}
+                        key={`${bKey}-${bSrc}`}
                         src={bSrc}
                         className={[
                           'absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ease-in-out',
