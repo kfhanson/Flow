@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { supportQuestions } from '../data/support'
+import { supportQuestions } from '../data/supportQa'
 
 type SupportState = {
   selectedQuestionId: string
