@@ -25,7 +25,7 @@ function ActionButtons({
           key={`${action.label}-${action.prompt}`}
           type="button"
           onClick={() => onSelectAction(action.prompt)}
-          className="rounded-full border border-border-strong bg-bg-primary px-3 py-1 text-xs text-text-muted transition hover:border-brand-red/60 hover:text-text-primary"
+          className="rounded-full border border-border-strong bg-bg-primary px-3 py-1 text-xs text-text-primary transition hover:border-brand-red/60"
         >
           {action.label}
         </button>
@@ -45,7 +45,7 @@ export default function ResponseRenderer({
           {response.title ? (
             <div className="text-sm font-semibold text-text-primary">{response.title}</div>
           ) : null}
-          <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-muted">
+          <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-primary">
             {response.body}
           </div>
           <ActionButtons
@@ -63,7 +63,7 @@ export default function ResponseRenderer({
             {response.options.map((option) => (
               <div
                 key={option}
-                className="rounded-xl border border-border-strong bg-bg-primary/70 px-3 py-2 text-xs text-text-muted"
+                className="rounded-xl border border-border-strong bg-bg-primary/70 px-3 py-2 text-xs text-text-primary"
               >
                 {option}
               </div>
@@ -81,7 +81,7 @@ export default function ResponseRenderer({
         <div>
           <div className="text-sm font-semibold text-text-primary">{response.title}</div>
           {response.body ? (
-            <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-muted">
+            <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-primary">
               {response.body}
             </div>
           ) : null}
@@ -94,7 +94,7 @@ export default function ResponseRenderer({
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="text-sm font-semibold text-text-primary">{product.name}</div>
-                    <div className="mt-1 text-xs uppercase tracking-[0.16em] text-text-muted">
+                    <div className="mt-1 text-xs uppercase tracking-[0.16em] text-text-primary">
                       {product.category}
                     </div>
                   </div>
@@ -102,7 +102,7 @@ export default function ResponseRenderer({
                     {formatIDRCurrency(product.price)}
                   </div>
                 </div>
-                <div className="mt-3 text-sm leading-relaxed text-text-muted">
+                <div className="mt-3 text-sm leading-relaxed text-text-primary">
                   {product.description}
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function ResponseRenderer({
               <div className="text-sm font-semibold text-text-primary">
                 {response.title ?? response.product.name}
               </div>
-              <div className="mt-1 text-xs uppercase tracking-[0.16em] text-text-muted">
+              <div className="mt-1 text-xs uppercase tracking-[0.16em] text-text-primary">
                 {response.product.category}
               </div>
             </div>
@@ -132,11 +132,11 @@ export default function ResponseRenderer({
             </div>
           </div>
           {response.body ? (
-            <div className="mt-3 whitespace-pre-line text-sm leading-relaxed text-text-muted">
+            <div className="mt-3 whitespace-pre-line text-sm leading-relaxed text-text-primary">
               {response.body}
             </div>
           ) : null}
-          <div className="mt-4 grid gap-2 text-xs text-text-muted">
+          <div className="mt-4 grid gap-2 text-xs text-text-primary">
             <div>Colors: {response.product.colorways.join(', ')}</div>
             <div>Sizes: {response.product.sizes.join(', ')}</div>
             <div>Materials: {response.product.materials.join(', ')}</div>
@@ -153,7 +153,7 @@ export default function ResponseRenderer({
         <div>
           <div className="text-sm font-semibold text-text-primary">{response.title}</div>
           {response.body ? (
-            <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-muted">
+            <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-primary">
               {response.body}
             </div>
           ) : null}
@@ -168,7 +168,7 @@ export default function ResponseRenderer({
                   <div className="text-sm font-semibold text-text-primary">
                     {product?.name ?? item.productId}
                   </div>
-                  <div className="mt-1 text-xs text-text-muted">
+                  <div className="mt-1 text-xs text-text-primary">
                     {item.color} · size {item.size} · qty {item.quantity}
                   </div>
                 </div>
@@ -190,7 +190,7 @@ export default function ResponseRenderer({
         <div>
           <div className="text-sm font-semibold text-text-primary">{response.title}</div>
           {response.body ? (
-            <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-muted">
+            <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-primary">
               {response.body}
             </div>
           ) : null}
@@ -203,9 +203,9 @@ export default function ResponseRenderer({
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="text-sm font-semibold text-text-primary">{store.name}</div>
-                    <div className="mt-1 text-xs text-text-muted">{store.address}</div>
+                    <div className="mt-1 text-xs text-text-primary">{store.address}</div>
                   </div>
-                  <div className="text-xs text-text-muted">{store.distanceKm} km</div>
+                  <div className="text-xs text-text-primary">{store.distanceKm} km</div>
                 </div>
               </div>
             ))}
@@ -230,13 +230,13 @@ export default function ResponseRenderer({
                 <div className="flex items-start justify-between gap-4">
                   <div>
                     <div className="text-sm font-semibold text-text-primary">{method.name}</div>
-                    <div className="mt-1 text-xs text-text-muted">{method.description}</div>
+                    <div className="mt-1 text-xs text-text-primary">{method.description}</div>
                   </div>
                   <div className="text-sm text-text-primary">
                     {formatIDRCurrency(method.cost)}
                   </div>
                 </div>
-                <div className="mt-2 text-xs text-text-muted">
+                <div className="mt-2 text-xs text-text-primary">
                   {method.estimatedDeliveryTime}
                 </div>
               </div>
@@ -254,7 +254,7 @@ export default function ResponseRenderer({
         <div>
           <div className="text-sm font-semibold text-text-primary">{response.title}</div>
           {response.body ? (
-            <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-muted">
+            <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-primary">
               {response.body}
             </div>
           ) : null}
@@ -274,11 +274,11 @@ export default function ResponseRenderer({
                       <div className="text-sm font-semibold text-text-primary">
                         Order {order.orderId}
                       </div>
-                      <div className="mt-1 text-xs text-text-muted">
+                      <div className="mt-1 text-xs text-text-primary">
                         {store?.name ?? order.storeId} · {method?.name ?? order.deliveryMethodId}
                       </div>
                     </div>
-                    <div className="text-xs uppercase tracking-[0.16em] text-text-muted">
+                    <div className="text-xs uppercase tracking-[0.16em] text-text-primary">
                       {order.status}
                     </div>
                   </div>
@@ -301,7 +301,7 @@ export default function ResponseRenderer({
         <div>
           <div className="text-sm font-semibold text-text-primary">{response.title}</div>
           {response.body ? (
-            <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-muted">
+            <div className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text-primary">
               {response.body}
             </div>
           ) : null}
@@ -311,7 +311,7 @@ export default function ResponseRenderer({
               {response.summary.category.toLowerCase()} product
               {response.summary.numberOfProducts === 1 ? '' : 's'} in stock.
             </div>
-            <div className="mt-2 text-xs text-text-muted">
+            <div className="mt-2 text-xs text-text-primary">
               Available: {response.summary.productNames.join(', ')}
             </div>
           </div>
