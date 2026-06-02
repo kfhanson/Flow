@@ -72,11 +72,12 @@
 - Decision: `src/index.css` must keep the `@config '../tailwind.config.cjs';` directive immediately after `@import 'tailwindcss';`
 - Why: Tailwind v4 with `@tailwindcss/postcss` does NOT auto-load a legacy JS config. Without `@config`, every custom-named utility (`bg-brand-red`, `text-text-muted`, `bg-bg-panel`, `border-border-strong`, `font-display`, etc.) silently emits nothing and the brand system breaks. Do not remove this line.
 
-## Pending Decisions
+### D-015: Range-Request Worker In Front Of Video Assets
+- Status: accepted
+- Decision: keep the Cloudflare Workers + `@cloudflare/vite-plugin` deploy pipeline, with `worker/index.js` registered as `main` and `assets.run_worker_first: ["/assets/*.mp4"]` in `wrangler.jsonc` so video requests get HTTP 206 partial responses. PixVerse videos ship as local static files bundled by Vite (resolves P-001 for the hackathon build).
+- Why: Workers static assets ignore the HTTP `Range` header, and Safari/iOS refuse to play `<video>` without `206 Partial Content` — videos rendered blank on the deployed site. The worker shim fixes playback everywhere while keeping a single deploy pipeline. Revisit R2 for media if any file approaches the 25 MiB asset limit. Do not remove `main` or `run_worker_first` from `wrangler.jsonc`.
 
-### P-001: Video Asset Packaging
-- Status: pending
-- Question: whether final PixVerse assets should ship as local static files, CDN assets, or mixed delivery
+## Pending Decisions
 
 ### P-002: Cart CTA Destination
 - Status: pending

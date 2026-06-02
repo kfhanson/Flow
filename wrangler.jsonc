@@ -1,12 +1,18 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "flow-platform",
+  "main": "worker/index.js",
   "compatibility_date": "2026-06-02",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "not_found_handling": "single-page-application"
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    // Workers static assets ignore HTTP Range headers, which breaks video
+    // playback in Safari/iOS. Route video requests through the worker so it
+    // can serve proper 206 partial responses. Do not remove.
+    "run_worker_first": ["/assets/*.mp4"]
   },
   "compatibility_flags": [
     "nodejs_compat"

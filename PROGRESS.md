@@ -4,6 +4,7 @@
 Project phase: hero media integrated + cart prototype + landing-page editorial UI pass
 
 ## Recent
+- Fixed deployed video playback: Cloudflare Workers static assets ignore HTTP Range headers, so Safari/iOS showed no videos. Added `worker/index.js` range shim wired via `main` + `assets.run_worker_first` in `wrangler.jsonc` (206 partial responses for `/assets/*.mp4`, verified locally via `wrangler dev`) — see D-015.
 - Fixed a root-cause styling bug: Tailwind v4 was not loading `tailwind.config.cjs`, so all custom-named utilities (brand red, panels, muted text, borders) silently emitted nothing. Added `@config '../tailwind.config.cjs';` to `src/index.css` — brand system now applies (see D-014).
 - Landing-page P1 editorial pass: added Fraunces display serif (`font-display`) for hero/section headlines, story pull-quote, and featured review (D-013); scaled the hero headline to a fluid clamp and slimmed the hero product panel; converted variant "Add to cart" buttons to ghost-fill (red reserved as accent); added editorial index numbers to section eyebrows and an asymmetric reviews wall.
 
